@@ -1,0 +1,22 @@
+/*    Alpha layer: Hands Down Vibranium v
+    ╭─────────────────────╮ ╭──────────────────────╮
+    │  X   W   M   G   J  │ │  #$  .:  '(   ")  B  │ 
+    │  S   C   N   T   K  │ │  ,;   A   E   I   H  │ 
+    │  V   P   L   D   /* │ │  -+   U   O   Y   F  │
+    ╰──────╮ ENT/  R/ SHF │ │ SYM SPC/ BSP/ ╭──────╯
+           │ SYS  NAV     │ │     NUM  SYS  │
+           ╰──────────────╯ ╰───────────────╯
+*/
+
+
+                BASE {
+                        label = "BASE";
+                        bindings = <
+
+&kp X  &kp W  &kp M          &kp G      &kp J          &HashDllr      &DotColn       &SqtLpar      &DqtRpar  &kp B
+&kp S  &kp C  &kp N          &kp T      &kp K          &CmmaSemi      &kp A          &kp E         &kp I     &kp H
+&kp V  &kp P  &kp L          &kp D      &SlshStar      &MinusPlus     &kp U          &kp O         &kp Y     &kp F
+
+              &lt SYS ENTER  &lt NAV R  &SuperShift    &l_sl SYM SYM  &lt NUM SPACE  &SYS_BspcDel
+                        >;
+                };
