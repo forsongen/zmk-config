@@ -70,6 +70,6 @@ COMBO_ANY(typeTilde, &kp TILDE,     RM2 RM5) // tilde
 COMBO_LAYER(typeNdash, &lk LA(LS(MINUS)) LA(MINUS), RM4 RM5, BASE) // N-dash (M-dash if held)
 
 #ifdef EN_PRONOUN_COMBOS
-#include "./combos-pn_3x5_HD-vv.dtsi"
+#include "./pncombos.dtsi"
 #endif
 };
