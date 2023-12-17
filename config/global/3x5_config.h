@@ -59,6 +59,8 @@
 #define KEYS_R RT2x RT2 RT3 RT4 RT5 RM2x RM2 RM3 RM4 RM5 RB2x RB2 RB3 RB4 RB5  // right-hand keys
 #define THUMBS L1c L1h L1x R1x R1h R1c                                      // thumb keys
 
+#define HYPER LC(LA(LG(LSHFT)))
+
 // LAYERS
 
 #define BASE  0

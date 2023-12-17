@@ -1,27 +1,27 @@
-//                               Navigation and shortcuts
-//╭─────────────────────────────────────────╮ ╭──────────────────────────────────────────╮
-//│  quit  . home  . close .  end  .  ___   │ │  pg_up  .  ___  .  ___  .  ___  .  ___   │
-//│  lword . left  .  up   . right . rword  │ │  pg_dn  .  ___  .  ___  .   Q   .   Z    │
-//│  undo  . cp/ct . down  . paste . redo   │ │   ___   .  ___  .  ___  .  ___  .  ___   │
-//╰───────────────╮   ___  .  ___  .  ___   │ │  back   .  fwd  .  ___   ╭───────────────╯
-//                ╰─────────────────────────╯ ╰──────────────────────────╯
+//                               Navigation and media
+//╭───────────────────────────────────────╮ ╭───────────────────────────────────────╮
+//│ home  . mute  . voldn . volup .  end  │ │ pg_up .  ___  .  ___  .  ___  .  ___  │
+//│ lword . left  .  up   . right . rword │ │ pg_dn .  ___  .  ___  .   Q   .   Z   │
+//│  ___  .  p/p  . down  .  ___  .  ___  │ │  ___  .  ___  .  ___  .  ___  .  ___  │
+//╰──────────────╮   ___  .  ___  .  ___  │ │  back .  fwd  .  ___   ╭──────────────╯
+//               ╰────────────────────────╯ ╰────────────────────────╯
                 NAV {
                     label = "NAV";
                     bindings = <
-&kp RG(Q)           &kp HOME         &kp RG(W)  &kp END    &none            &kp PG_UP     &none         &none  &none  &none
-&mt RSHFT LA(LEFT)  &kp LEFT         &kp UP     &kp RIGHT  &kp LA(RIGHT)    &kp PG_DN     &none         &none  &kp Q  &kp Z
-&kp RG(Z)           &lk RG(X) RG(C)  &kp DOWN   &kp RG(V)  &kp RG(RS(Z))    &none         &none         &none  &none  &none
-                                     &none      &none      &none            &kp LG(LBKT)  &kp LG(RBKT)  &none
+&kp HOME            &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp END          &kp PG_UP     &none         &none  &none  &none
+&mt RSHFT LA(LEFT)  &kp LEFT    &kp UP        &kp RIGHT     &kp LA(RIGHT)    &kp PG_DN     &none         &none  &kp Q  &kp Z
+&none               &bp C_PP    &kp DOWN      &none         &none            &none         &none         &none  &none  &none
+                                &none         &none         &none            &kp LG(LBKT)  &kp LG(RBKT)  &none
                     >;
                 };
  
 //                                         Symbol
-//╭─────────────────────────────────────────╮ ╭──────────────────────────────────────────╮
-//│    `   .   \   .   /   .   @   .  */^   │ │    #    .   .   .   (   .   )   .   ;    │
-//│    <   .   =   .   -   .   >   .   +    │ │    ,    .   {   .   '   .   "   .   }    │
-//│    !   .   &   .   |   .   %   .   _    │ │   ___   .   $   .   [   .   ]   .   ~    │
-//╰───────────────╮   vvv  .  vvv  .  vvv   │ │  lock   .  vvv  .  vvv   ╭───────────────╯
-//                ╰─────────────────────────╯ ╰──────────────────────────╯
+//╭───────────────────────────────────────╮ ╭───────────────────────────────────────╮
+//│   `   .   \   .   /   .   @   .  */^  │ │   #   .   .   .   (   .   )   .   ;   │
+//│   <   .   =   .   -   .   >   .   +   │ │   ,   .   {   .   '   .   "   .   }   │
+//│   !   .   &   .   |   .   %   .   _   │ │  ___  .   $   .   [   .   ]   .   ~   │
+//╰──────────────╮   vvv  .  vvv  .  vvv  │ │ lock  .  vvv  .  vvv   ╭──────────────╯
+//               ╰────────────────────────╯ ╰────────────────────────╯
                 SYM {
                     label = "SYM";
                     bindings = <
@@ -32,14 +32,13 @@
                     >;
                 };
 
-
 //                                        Number
-//╭─────────────────────────────────────────╮ ╭──────────────────────────────────────────╮
-//│    =   .   7   .   8   .   9   .  lock  │ │    #    .   .   .   (   .   )   .  ___   │
-//│    +   .   4   .   5   .   6   .   -    │ │    ,    .   :   .  ___  .  ___  .  ___   │
-//│   */^  .   1   .   2   .   3   .   /    │ │    -    .   $   .   £   .   €   .   ~    │
-//╰───────────────╮   vvv  .  vvv  .  vvv   │ │   vvv   .  vvv  .  vvv   ╭───────────────╯
-//                ╰─────────────────────────╯ ╰──────────────────────────╯
+//╭───────────────────────────────────────╮ ╭───────────────────────────────────────╮
+//│   =   .   7   .   8   .   9   . lock  │ │   #   .   .   .   (   .   )   .  ___  │
+//│   +   .   4   .   5   .   6   .   -   │ │   ,   .   :   .  ___  .  ___  .  ___  │
+//│  */^  .   1   .   2   .   3   .   /   │ │   -   .   $   .   £   .   €   .   ~   │
+//╰──────────────╮   vvv  .  vvv  .  vvv  │ │  vvv  .  vvv  .  vvv   ╭──────────────╯
+//               ╰────────────────────────╯ ╰────────────────────────╯
                     NUM {
                         label = "NUM";
                         bindings = <
@@ -52,20 +51,19 @@
                         >;
                 };
 
-
 //                                    Function/system
-//╭─────────────────────────────────────────╮ ╭──────────────────────────────────────────╮
-//│   ___  . prev  . next  .  p/p  .  ___   │ │   BT0   .  BT1  .  BT2  .  BT3  .  BT4   │
-//│   ___  . vol-  . vol+  . mute  .  ___   │ │  BTCLR  .  ___  .  ___  .  F11  .  F12   │
-//│   F1   .  F2   .  F3   .  F4   .  F5    │ │   F6    .  F7   .  F8   .  F9   .  F10   │
-//╰───────────────╮   ___  .  ___  .  ___   │ │   ___   .  ___  .  ___   ╭───────────────╯
-//                ╰─────────────────────────╯ ╰──────────────────────────╯
+//╭───────────────────────────────────────╮ ╭───────────────────────────────────────╮
+//│  F1   .  F2   .  F3   .  F4   .  ___  │ │  BT0  .  BT1  .  BT2  .  BT3  .  BT4  │
+//│  F5   .  F6   .  F7   .  F8   .  ___  │ │  ___  .  ___  .  ___  .  ___  .  ___  │
+//│  F9   .  F10  .  F11  .  F12  .  ___  │ │  ___  .  ___  .  ___  .  ___  . BTCLR │
+//╰──────────────╮   ___  .  ___  .  ___  │ │  ___  .  ___  .  ___   ╭──────────────╯
+//               ╰────────────────────────╯ ╰────────────────────────╯
                     SYS {
                         label = "SYS";
                         bindings = <
-&none   &kp C_PREV    &kp C_NEXT    &kp C_PP    &none     &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&none   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &none     &bt BT_CLR     &none         &none         &kp F11       &kp F12
-&kp F1  &kp F2        &kp F3        &kp F4      &kp F5    &kp F6         &kp F7        &kp F8        &kp F9        &kp F10
-                      &none         &none       &none     &none          &none         &none
+&kp F1  &kp F2   &kp F3   &kp F4   &none    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&kp F5  &kp F6   &kp F7   &kp F8   &none    &none         &none         &none         &none         &none
+&kp F9  &kp F10  &kp F11  &kp F12  &none    &none         &none         &none         &none         &bt BT_CLR 
+                 &none    &none    &none    &none         &none         &none
                         >;
                 };

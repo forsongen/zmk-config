@@ -31,10 +31,19 @@ COMBO_ANY(rAltGui,     &kp RA(RGUI),    RB2 RB3 RB4)
 COMBO_ANY(rCtrlGui,    &kp RC(RGUI),    RB2 RB3 RB4 RB5)
 COMBO_ANY(rCtrlAltGui, &kp RC(RA(RGUI)), RB2 RM3 RM4 RB5)
 
-// Control/modes
-COMBO_LAYER(appswitch, &AppSwitch, LT4 LT3, NAV) // App switch
-COMBO_LAYER(tabswitch, &TabSwitch, LT3 LT2, NAV) // Tab switch
-COMBO_LAYER(capswd, &caps_word, L1x R1x, BASE) // Capsword
+// Shortcuts
+COMBO_LAYER(cut,   &kp RG(X),      LB5 LB4, NAV) // cut
+COMBO_LAYER(copy,   &kp RG(C),     LB4 LB3, NAV) // copy
+COMBO_LAYER(paste,   &kp RG(V),    LB3 LB2, NAV) // paste
+COMBO_LAYER(undo,   &kp RG(Z),     LM5 LM4, NAV) // undo
+COMBO_LAYER(redo,   &kp RG(LS(Z)), LM2 LM2x, NAV) // redo
+COMBO_LAYER(sall,   &kp RG(A),     LT4 LT3, NAV) // select all
+COMBO_LAYER(find,   &kp RG(F),     LT3 LT2, NAV) // find
+COMBO_LAYER(close,   &kp RG(W),    LT2 LT2x, NAV) // close
+COMBO_LAYER(quit,   &kp RG(Q),     LT5 LT4, NAV) // quit
+COMBO_LAYER(appswitch, &AppSwitch, LM4 LM3, NAV) // app swapper
+COMBO_LAYER(tabswitch, &TabSwitch, LM3 LM2, NAV) // tab swapper
+COMBO_LAYER(capswd, &caps_word, L1x R1x, BASE) // caps word
 
 // Editing actions (&whitespace)
 COMBO_ANY(tab,      &kp TAB,        LM5 LM3)
@@ -42,8 +51,6 @@ COMBO_ANY(stab,     &kp LS(TAB),    LT5 LT3)
 COMBO_ANY(spce,     &kp SPACE,      LM2 LM2x)
 COMBO_ANY(bspcdel,  &BspcDel,       LB2 LB2x) 
 COMBO_ANY(esc,      &kp ESC,        LT5 LT4)
-COMBO_LAYER(sall,   &kp LG(A),      LT4 LT3, NAV)
-COMBO_LAYER(find,   &kp RG(F),      LM4 LM3, NAV)
 
 // H Digraphs REQUIRE macros (defined earlier) to process
 COMBO_LAYER(sch, &Sch, LM5 LM4 LM3, BASE) // Sch

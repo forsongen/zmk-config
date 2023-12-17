@@ -9,7 +9,7 @@ I don't really know what I'm doing, so you probably don't need to linger :)
     │  S   C   N   T   K  │ │  ,;   A   E   I   H  │ 
     │  V   P   L   D   /* │ │  -+   U   O   Y   F  │
     ╰──────╮ ENT/  R/ SHF │ │ SYM SPC/ BSP/ ╭──────╯
-           │ SYS  NAV     │ │     NUM  SYS  │
+           │ HYP  NAV     │ │     NUM  SYS  │
            ╰──────────────╯ ╰───────────────╯
 
 Including Qu/Q combo (G + W), Z combo (T + C), H digraph combos, and pronoun combos (expanded).

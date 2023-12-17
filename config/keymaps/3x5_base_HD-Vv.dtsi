@@ -4,11 +4,9 @@
     │  S   C   N   T   K  │ │  ,;   A   E   I   H  │ 
     │  V   P   L   D   /* │ │  -+   U   O   Y   F  │
     ╰──────╮ ENT/  R/ SHF │ │ SYM SPC/ BSP/ ╭──────╯
-           │ SYS  NAV     │ │     NUM  SYS  │
+           │ HYP  NAV     │ │     NUM  SYS  │
            ╰──────────────╯ ╰───────────────╯
 */
-
-
                 BASE {
                         label = "BASE";
                         bindings = <
@@ -17,6 +15,6 @@
 &kp S  &kp C  &kp N          &kp T      &kp K          &CmmaSemi      &kp A          &kp E         &kp I     &kp H
 &kp V  &kp P  &kp L          &kp D      &SlshStar      &MinusPlus     &kp U          &kp O         &kp Y     &kp F
 
-              &lt SYS ENTER  &lt NAV R  &SuperShift    &l_sl SYM SYM  &lt NUM SPACE  &SYS_BspcDel
+              &mt HYPER ENTER  &lt NAV R  &SuperShift    &l_sl SYM SYM  &lt NUM SPACE  &SYS_BspcDel
                         >;
                 };
