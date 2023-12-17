@@ -10,7 +10,7 @@
                     bindings = <
 &kp HOME            &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp END          &kp PG_UP     &none         &none  &none  &none
 &mt RSHFT LA(LEFT)  &kp LEFT    &kp UP        &kp RIGHT     &kp LA(RIGHT)    &kp PG_DN     &none         &none  &kp Q  &kp Z
-&none               &bp C_PP    &kp DOWN      &none         &none            &none         &none         &none  &none  &none
+&none               &kp C_PP    &kp DOWN      &none         &none            &none         &none         &none  &none  &none
                                 &none         &none         &none            &kp LG(LBKT)  &kp LG(RBKT)  &none
                     >;
                 };
