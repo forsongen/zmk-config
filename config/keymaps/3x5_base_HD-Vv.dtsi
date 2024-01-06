@@ -1,20 +1,17 @@
-/*    Alpha layer: Hands Down Vibranium v
-    ╭─────────────────────╮ ╭──────────────────────╮
-    │  X   W   M   G   J  │ │  #$  .:  '(   ")  B  │ 
-    │  S   C   N   T   K  │ │  ,;   A   E   I   H  │ 
-    │  V   P   L   D   /* │ │  -+   U   O   Y   F  │
-    ╰──────╮ ENT/  R/ SHF │ │ SYM SPC/ BSP/ ╭──────╯
-           │ HYP  NAV     │ │     NUM  SYS  │
-           ╰──────────────╯ ╰───────────────╯
-*/
-                BASE {
-                        label = "BASE";
-                        bindings = <
+//                                BASE
+//                        Hands Down Vibranium v
+//  ╭─────────────────────────╮           ╭─────────────────────────╮
+//  │  X    W    M    G    J  │           │  #$   .:   '(   ")   B  │
+//  │  S    C    N    T    K  │           │  ,;   A    E    I    H  │
+//  │  V    P    L    D    /* ╰────╮ ╭────╯  -+   U    O    Y    F  │
+//  ╰────────────╮   ENT   R    sk │ │ sk   SPC  BSPC  ╭────────────╯
+//               ╰─HYPER─RAISE─SHFT╯ ╰SHFT─LOWER─HYPER─╯
 
-&kp X  &kp W  &kp M          &kp G      &kp J          &HashDllr      &DotColn       &SqtLpar      &DqtRpar  &kp B
-&kp S  &kp C  &kp N          &kp T      &kp K          &CmmaSemi      &kp A          &kp E         &kp I     &kp H
-&kp V  &kp P  &kp L          &kp D      &SlshStar      &MinusPlus     &kp U          &kp O         &kp Y     &kp F
+                ZMK_LAYER(BASE,
 
-              &mt HYPER ENTER  &lt NAV R  &SuperShift    &l_sl SYM SYM  &lt NUM SPACE  &SYS_BspcDel
-                        >;
-                };
+&kp X  &kp W  &kp M  &kp G  &kp J        &HASHDLLR   &DOTCOLON  &SQTLPAR  &DQTRPAR  &kp B
+&kp S  &kp C  &kp N  &kp T  &kp K        &COMMASEMI  &kp A      &kp E     &kp I     &kp H
+&kp V  &kp P  &kp L  &kp D  &FSLHSTAR    &MINUSPLUS  &kp U      &kp O     &kp Y     &kp F
+//
+    &mt HYPER ENTER  &lt RAISE R  &superLSHFT    &superRSHFT  &L_SPCTAB   &H_BSPCDEL
+                )

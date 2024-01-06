@@ -1,6 +1,4 @@
-//  Adapted from moutis_config.dtsi in moutis/zmk-config
-
-/*    Key positions for 3x5
+/*    Key positions for 3x5, based on piano fingering
     ╭──────────────────────╮ ╭──────────────────────╮
     │   0   1   2   3  4   │ │   5   6   7   8   9  │
     │  10  11  12  13  14  │ │  15  16  17  18  19  │
@@ -55,36 +53,7 @@
 #define R1h 34
 #define R1c 35
 
-#define KEYS_L LT2x LT2 LT3 LT4 LT5 LM2x LM2 LM3 LM4 LM5 LB2x LB2 LB3 LB4 LB5 // left-hand keys
-#define KEYS_R RT2x RT2 RT3 RT4 RT5 RM2x RM2 RM3 RM4 RM5 RB2x RB2 RB3 RB4 RB5  // right-hand keys
-#define THUMBS L1c L1h L1x R1x R1h R1c                                      // thumb keys
-
-#define HYPER LC(LA(LG(LSHFT)))
-
-// LAYERS
-
-#define BASE  0
-#define NAV   1
-#define SYM   2
-#define NUM   3
-#define SYS   4
-
-// TAPPING TERMS
-
-#define my_tapping_term 170
-#define my_quick_tapping_term 112
-
-&mt {
-    tapping-term-ms = <my_tapping_term>;
-    hold-while-undecided;
-};
-&sl {
-    release-after-ms = <my_tapping_term>;
-};
-&sk {
-  release-after-ms = <2000>;
-  quick-release;
-};
-&caps_word {
-    continue-list = <UNDER MINUS BSPC DEL LEFT RIGHT>;
-};
+/* Useful for positional hold taps, currently unused */
+//#define KEYS_L LT2x LT2 LT3 LT4 LT5 LM2x LM2 LM3 LM4 LM5 LB2x LB2 LB3 LB4 LB5 // left-hand keys
+//#define KEYS_R RT2x RT2 RT3 RT4 RT5 RM2x RM2 RM3 RM4 RM5 RB2x RB2 RB3 RB4 RB5 // right-hand keys
+//#define THUMBS L1c L1h L1x R1x R1h R1c                                        // thumb keys

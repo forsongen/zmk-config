@@ -1,82 +1,169 @@
-#define COMBO_LAYER(NAME, BINDINGS, KEYPOS, LAYERS) \
-  combo_##NAME { \
-    bindings = <BINDINGS>; \
-    key-positions = <KEYPOS>; \
-    layers = <LAYERS>; \
-    timeout-ms = <45>; \
-};
-#define COMBO_ANY(NAME, BINDINGS, KEYPOS) \
-  combo_##NAME { \
-    bindings = <BINDINGS>; \
-    key-positions = <KEYPOS>; \
-    timeout-ms = <45>; \
-};
-
 combos {
     compatible = "zmk,combos";
 
-// Mods
-COMBO_ANY(lCtrl,       &kp LCTRL,       LB5 LB4)
-COMBO_ANY(lAlt,        &kp LALT,        LB4 LB3)
-COMBO_ANY(lGui,        &kp LGUI,        LB3 LB2)
-COMBO_ANY(lCtrlAlt,    &kp LC(LALT),    LB5 LB4 LB3)
-COMBO_ANY(lAltGui,     &kp LA(LGUI),    LB4 LB3 LB2)
-COMBO_ANY(lCtrlGui,    &kp LC(LGUI),    LB5 LB4 LB3 LB2)
-COMBO_ANY(lCtrlAltGui, &kp LC(LA(LGUI)), LB5 LM4 LM3 LB2)
-COMBO_ANY(rCtrl,       &kp RCTRL,       RB4 RB5)
-COMBO_ANY(rAlt,        &kp RALT,        RB3 RB4)
-COMBO_ANY(rGui,        &kp RGUI,        RB2 RB3)
-COMBO_ANY(rCtrlAlt,    &kp RC(RALT),    RB3 RB4 RB5)
-COMBO_ANY(rAltGui,     &kp RA(RGUI),    RB2 RB3 RB4)
-COMBO_ANY(rCtrlGui,    &kp RC(RGUI),    RB2 RB3 RB4 RB5)
-COMBO_ANY(rCtrlAltGui, &kp RC(RA(RGUI)), RB2 RM3 RM4 RB5)
+    /* MODS */ // RAISE/LOWER
 
-// Shortcuts
-COMBO_LAYER(cut,   &kp RG(X),      LB5 LB4, NAV) // cut
-COMBO_LAYER(copy,   &kp RG(C),     LB4 LB3, NAV) // copy
-COMBO_LAYER(paste,   &kp RG(V),    LB3 LB2, NAV) // paste
-COMBO_LAYER(undo,   &kp RG(Z),     LM5 LM4, NAV) // undo
-COMBO_LAYER(redo,   &kp RG(LS(Z)), LM2 LM2x, NAV) // redo
-COMBO_LAYER(sall,   &kp RG(A),     LT4 LT3, NAV) // select all
-COMBO_LAYER(find,   &kp RG(F),     LT3 LT2, NAV) // find
-COMBO_LAYER(close,   &kp RG(W),    LT2 LT2x, NAV) // close
-COMBO_LAYER(quit,   &kp RG(Q),     LT5 LT4, NAV) // quit
-COMBO_LAYER(appswitch, &AppSwitch, LM4 LM3, NAV) // app swapper
-COMBO_LAYER(tabswitch, &TabSwitch, LM3 LM2, NAV) // tab swapper
-COMBO_LAYER(capswd, &caps_word, L1x R1x, BASE) // caps word
+    ZMK_COMBO(lCtrl,       &kp LCTRL,                LM5 LM4, RAISE)
+    ZMK_COMBO(lAlt,        &kp LALT,                 LM4 LM3, RAISE)
+    ZMK_COMBO(lGui,        &kp LGUI,                 LM3 LM2, RAISE)
+    ZMK_COMBO(lCtrlAlt,    &kp LC(LALT),         LM5 LM4 LB3, RAISE)
+    ZMK_COMBO(lAltGui,     &kp LA(LGUI),         LM4 LM3 LM2, RAISE)
+    ZMK_COMBO(lCtrlGui,    &kp LC(LGUI),     LM5 LM4 LM3 LM2, RAISE)
+    ZMK_COMBO(lCtrlAltGui, &kp LC(LA(LGUI)), LM5 LT4 LT3 LM2, RAISE)
+    ZMK_COMBO(rCtrl,       &kp RCTRL,                RM4 RM5, LOWER)
+    ZMK_COMBO(rAlt,        &kp RALT,                 RM3 RM4, LOWER)
+    ZMK_COMBO(rGui,        &kp RGUI,                 RM2 RM3, LOWER)
+    ZMK_COMBO(rCtrlAlt,    &kp RC(RALT),         RM3 RM4 RM5, LOWER)
+    ZMK_COMBO(rAltGui,     &kp RA(RGUI),         RM2 RM3 RM4, LOWER)
+    ZMK_COMBO(rCtrlGui,    &kp RC(RGUI),     RM2 RM3 RM4 RM5, LOWER)
+    ZMK_COMBO(rCtrlAltGui, &kp RC(RA(RGUI)), RM2 RT3 RT4 RM5, LOWER)
 
-// Editing actions (&whitespace)
-COMBO_ANY(tab,      &kp TAB,        LM5 LM3)
-COMBO_ANY(stab,     &kp LS(TAB),    LT5 LT3)
-COMBO_ANY(spce,     &kp SPACE,      LM2 LM2x)
-COMBO_ANY(bspcdel,  &BspcDel,       LB2 LB2x) 
-COMBO_ANY(esc,      &kp ESC,        LT5 LT4)
+    /* LAYERS */
 
-// H Digraphs REQUIRE macros (defined earlier) to process
-COMBO_LAYER(sch, &Sch, LM5 LM4 LM3, BASE) // Sch
-COMBO_LAYER(tch, &Tch, LM5 LM4 LM2, BASE) // Tch
-COMBO_LAYER(th,  &Th,      LM3 LM2, BASE) // Th
-COMBO_LAYER(ch,  &Ch,      LM4 LM3, BASE) // Ch
-COMBO_LAYER(wh,  &Wh,      LT4 LT3, BASE) // Wh
-COMBO_LAYER(sh,  &Sh,      LM5 LM4, BASE) // Sh
-COMBO_LAYER(gh,  &Gh,      LT3 LT2, BASE) // Gh
-COMBO_LAYER(ght, &ght, LT4 LT3 LT2, BASE) // ght
-COMBO_LAYER(ph,  &Ph,      LB4 LB2, BASE) // Ph
+    // Layer sticky layers
+    ZMK_COMBO(lSYM, &lsl SYM SYM, LB4 LB3, ALL) // SYM sticky tap (mo held)
+    ZMK_COMBO(rSYM, &lsl SYM SYM, RB3 RB4, ALL) // SYM sticky tap (mo held)
+    ZMK_COMBO(lNUM, &lsl NUM NUM, LB3 LB2, ALL) // NUM sticky tap (mo held)
+    ZMK_COMBO(rNUM, &lsl NUM NUM, RB2 RB3, ALL) // NUM sticky tap (mo  held)
 
-// Glyphs
-COMBO_LAYER(typeQ, &lk_qu Q U,      LT4 LT2, BASE) //
-COMBO_LAYER(typeZ, &kp Z,           LM4 LM2, BASE) //
-COMBO_ANY(typeLt, &lk AMPS LT,      RT2 RT3) // < (& if held)
-COMBO_ANY(typeGt, &lk PIPE GT,      RT3 RT4) // > (| if held)
-COMBO_ANY(typeGrav, &kp AT,         RT4 RT5) // @
-COMBO_ANY(typeExcl, &kp EXCL,       RM2 RM3) // !
-COMBO_ANY(typeQues, &kp QMARK,      RM3 RM4) // ?
-COMBO_ANY(typeEqual, &lk PRCNT EQUAL, RM2 RM4) // = (% if held)
-COMBO_ANY(typeUnder, &kp UNDER,     RB2 RB4) // _
-COMBO_ANY(typeTilde, &kp TILDE,     RM2 RM5) // tilde
-COMBO_LAYER(typeNdash, &lk LA(LS(MINUS)) LA(MINUS), RM4 RM5, BASE) // N-dash (M-dash if held)
+    // Overlays
+    ZMK_COMBO(lSYMoverlay, &kp F23, LB4 LB3, SYM) // SYM overlay hotkey
+    ZMK_COMBO(rSYMoverlay, &kp F23, RB3 RB4, SYM) // SYM overlay hotkey
+    ZMK_COMBO(lNUMoverlay, &kp F24, LB3 LB2, NUM) // NUM overlay hotkey
+    ZMK_COMBO(rNUMoverlay, &kp F24, RB2 RB3, NUM) // NUM overlay hotkey
 
-#ifdef EN_PRONOUN_COMBOS
-#include "./pncombos.dtsi"
-#endif
+    // Layer locks and unlocks
+    ZMK_COMBO(lSYMlock,   &to SYM,  LB4 LM3, ALL) // SYM lock
+    ZMK_COMBO(rSYMlock,   &to SYM,  RM3 RB4, ALL) // SYM lock
+    ZMK_COMBO(lSYMunlock, &to BASE, LB4 LB3, SYM) // SYM unlock -> BASE
+    ZMK_COMBO(rSYMunlock, &to BASE, RB3 RB4, SYM) // SYM unlock -> BASE
+    ZMK_COMBO(lNUMlock,   &to NUM,  LM3 LB2, ALL) // NUM lock
+    ZMK_COMBO(rNUMlock,   &to NUM,  RB2 RM3, ALL) // NUM lock
+    ZMK_COMBO(lNUMunlock, &to BASE, LB3 LB2, NUM) // NUM unlock -> BASE
+    ZMK_COMBO(rNUMunlock, &to BASE, RB2 RB3, NUM) // NUM unlock -> BASE
+
+    /* SHORTCUTS */ // RAISE
+
+    ZMK_COMBO(copy,  &lk RG(X) RG(C),   LB4 LB3, RAISE) // copy (lk cut)
+    ZMK_COMBO(paste, &kp RG(V),         LB3 LB2, RAISE) // paste
+    ZMK_COMBO(undo,  &kp RG(Z),         LB4 LB2, RAISE) // undo
+    ZMK_COMBO(redo,  &kp RG(LS(Z)), LB4 LB3 LB2, RAISE) // redo
+    ZMK_COMBO(sall,  &kp RG(A),         LM5 LM3, RAISE) // select all
+    ZMK_COMBO(find,  &kp RG(F),         LM4 LM2, RAISE) // find
+    ZMK_COMBO(close, &kp RG(W),         LB5 LB4, RAISE) // close
+    ZMK_COMBO(quit,  &kp RG(Q),         LT5 LT4, RAISE) // quit
+    ZMK_COMBO(back,  &mkp MB4,          LT4 LT3, RAISE) // back
+    ZMK_COMBO(fwd,   &mkp MB5,          LT3 LT2, RAISE) // forward
+    
+    /* ACTIONS */
+
+    ZMK_COMBO(appswap, &app_swap,     LT4 LT2, RAISE) // app swapper
+    ZMK_COMBO(tabswap, &tab_swap, LT4 LT3 LT2, RAISE) // tab swapper
+    ZMK_COMBO(capswd,  &caps_word,    L1x R1x, ALL)   // caps word
+
+    /* KEYSTROKES */
+
+    ZMK_COMBO(typeQ, &lkqu Q M,     LT4 LT2, BASE) // Qu, Q if held
+    ZMK_COMBO(typeZ, &kp Z,         LM4 LM2, BASE) // Z
+    ZMK_COMBO(tab,   &kp TAB,       LM5 LM3, ALL) // tab
+    ZMK_COMBO(space, &kp SPACE, LM4 LM3 LM2, ALL) // space
+    ZMK_COMBO(esc,   &kp ESC,       LT5 LT4, ALL) // esc
+
+    /* H DIGRAPHS */
+
+    ZMK_COMBO(typeSch, &Sch, LM5 LM4 LM3, BASE) // Sch
+    ZMK_COMBO(typeTch, &Tch, LM5 LM4 LM2, BASE) // Tch
+    ZMK_COMBO(typeTh,  &Th,      LM3 LM2, BASE) // Th
+    ZMK_COMBO(typeCh,  &Ch,      LM4 LM3, BASE) // Ch
+    ZMK_COMBO(typeWh,  &Wh,      LT4 LT3, BASE) // Wh
+    ZMK_COMBO(typeSh,  &Sh,      LM5 LM4, BASE) // Sh
+    ZMK_COMBO(typeGh,  &Gh,      LT3 LT2, BASE) // Gh
+    ZMK_COMBO(typeGht, &ght, LT4 LT3 LT2, BASE) // ght
+    ZMK_COMBO(typePh,  &Ph,      LB4 LB2, BASE) // Ph
+
+    /* PUNCTUATION, CURRENCY, EQUIVALENCE */
+
+    ZMK_COMBO(typeExcl,  &kp EXCL,        RT2 RT3, ALL) // !
+    ZMK_COMBO(typeQues,  &kp QMARK,       RT3 RT4, ALL) // ?
+    ZMK_COMBO(typeAt,    &kp AT,          RT4 RT5, ALL) // @
+    ZMK_COMBO(typeUnder, &kp UNDER,       RB2 RB4, ALL) // _
+    ZMK_COMBO(typeEUR,   &kp LA(LS(N2)),  RT2 RT3, NUM) // €
+    ZMK_COMBO(typeGBP,   &kp LS(N3),      RT3 RT4, NUM) // £
+    ZMK_COMBO(typeUSD,   &kp DLLR,        RT4 RT5, NUM) // $
+    ZMK_COMBO(typeEqual, &lk PRCNT EQUAL, RM2 RM4, ALL) // = (lk %)
+    ZMK_COMBO(typeLt,    &lk AMPS LT,     RM2 RM3, ALL) // < (lk &)
+    ZMK_COMBO(typeGt,    &lk PIPE GT,     RM3 RM4, ALL) // > (lk |)
+    ZMK_COMBO(typeNdash,
+             &lk LA(LS(MINUS)) LA(MINUS), RM4 RM5, ALL) // – (lk —)
+
+    /* HYPER */
+
+    ZMK_COMBO(hyperSpace, &kp HP(SPACE), RB3 RB5, ALL) // homerow
+    ZMK_COMBO(hyperT,     &kp HP(T),     RT3 RT5, ALL) // homerow search
+    ZMK_COMBO(hyperA,     &kp HP(A),     RM3 RM5, ALL) // homerow scroll
+
+    /* PRONOUN COMBOS */ // Enable in config.h
+
+    #if defined ENABLE_PRONOUN_COMBOS
+        
+        // I
+        COMBO_LAYER(pn1Ss,  &kp LS(I),       RM4 LM2, BASE) // "I"
+        COMBO_LAYER(pn1So,  &typePnMe,       RM4 LM3, BASE) // "Me"
+        COMBO_LAYER(pn1Sp,  &typePnMy,       RM4 LB4, BASE) // "My"
+        COMBO_LAYER(pn1Sps, &typePnMine, RM4 LB4 LB3, BASE) // "Mine"
+        COMBO_LAYER(pnIm,   &typePnIm,       RM4 LT3, BASE) // "I'm"
+        COMBO_LAYER(pnIll,  &typePnIll,      RM4 LB3, BASE) // "I'll"
+        COMBO_LAYER(pnIve,  &typePnIve,      RM4 LB5, BASE) // "I've"
+        COMBO_LAYER(pnId,   &typePnId,       RM4 LB2, BASE) // "I'd"
+
+        // We
+        COMBO_LAYER(pn1Ps,  &typePnWe,       RB2 LM2, BASE) // "We"
+        COMBO_LAYER(pn1Po,  &typePnUs,       RB2 LM3, BASE) // "Us"
+        COMBO_LAYER(pn1Pp,  &typePnOur,      RB2 LB4, BASE) // "Our"
+        COMBO_LAYER(pn1Pps, &typePnOurs, RB2 LB5 LB4, BASE) // "Ours"
+        COMBO_LAYER(pnWere, &typePnWere,     RB2 L1h, BASE) // "We're"
+        COMBO_LAYER(pnWell, &typePnWell,     RB2 LB3, BASE) // "We'll"
+        COMBO_LAYER(pnWeve, &typePnWeve,     RB2 LB5, BASE) // "We've"
+        COMBO_LAYER(pnWed,  &typePnWed,      RB2 LB2, BASE) // "We'd"
+
+        // You
+        COMBO_LAYER(pn2s,    &typePnYou,       RB4 LM2, BASE) // "You"
+        COMBO_LAYER(pn2o,    &typePnYou,       RB4 LM3, BASE) // "You" alt
+        COMBO_LAYER(pn2p,    &typePnYour,      RB4 LB4, BASE) // "Your"
+        COMBO_LAYER(pn2ps,   &typePnYours, RB4 LB5 LB4, BASE) // "Yours"
+        COMBO_LAYER(pnYoure, &typePnYoure,     RB4 L1h, BASE) // "You're"
+        COMBO_LAYER(pnYoull, &typePnYoull,     RB4 LB3, BASE) // "You'll"
+        COMBO_LAYER(pnYouve, &typePnYouve,     RB4 LB5, BASE) // "You've"
+        COMBO_LAYER(pnYoud,  &typePnYoud,      RB4 LB2, BASE) // "You'd"
+
+        // He
+        COMBO_LAYER(pn3Ms,  &typePnHe,      RM5 LM2, BASE) // "He"
+        COMBO_LAYER(pn3Mo,  &typePnHim,     RM5 LM3, BASE) // "Him"
+        COMBO_LAYER(pn3Mp,  &typePnHis,     RM5 LB4, BASE) // "His"
+        COMBO_LAYER(pn3Mps, &typePnHis, RM5 LB5 LB4, BASE) // "His" alt
+        COMBO_LAYER(pnHes,  &typePnHes,     RM5 LM5, BASE) // "He's"
+        COMBO_LAYER(pnHell, &typePnHell,    RM5 LB3, BASE) // "He'll"
+        COMBO_LAYER(pnHed,  &typePnHed,     RM5 LB2, BASE) // "He'd"
+
+        // She
+        COMBO_LAYER(pn3Fs,   &typePnShe,      RM4 RM5 LM2, BASE) // "She"
+        COMBO_LAYER(pn3Fo,   &typePnHer,      RM4 RM5 LM3, BASE) // "Her"
+        COMBO_LAYER(pn3Fp,   &typePnHer,      RM4 RM5 LB4, BASE) // "Her" alt
+        COMBO_LAYER(pn3Fps,  &typePnHers, RM4 RM5 LB5 LB4, BASE) // "Hers"
+        COMBO_LAYER(pnShes,  &typePnShes,     RM4 RM5 LM5, BASE) // "She's"
+        COMBO_LAYER(pnShell, &typePnShell,    RM4 RM5 LB3, BASE) // "She'll"
+        COMBO_LAYER(pnShed,  &typePnShed,     RM4 RM5 LB2, BASE) // "She'd"
+
+        //They
+        COMBO_LAYER(pn3Ps,    &typePnThey,       RM3 LM2, BASE) // "They"
+        COMBO_LAYER(pn3Po,    &typePnThem,       RM3 LM3, BASE) // "Them"
+        COMBO_LAYER(pn3Pp,    &typePnTheir,      RM3 LB4, BASE) // "Their"
+        COMBO_LAYER(pn3Pps,   &typePnTheirs, RM3 LB5 LB4, BASE) // "Theirs"
+        COMBO_LAYER(pnTheyre, &typePnTheyre,     RM3 L1h, BASE) // "They're"
+        COMBO_LAYER(pnTheyll, &typePnTheyll,     RM3 LB3, BASE) // "They'll"
+        COMBO_LAYER(pnTheyve, &typePnTheyve,     RM3 LB5, BASE) // "They've"
+        COMBO_LAYER(pnTheyd,  &typePnTheyd,      RM3 LB2, BASE) // "They'd"
+
+    #endif
+
 };
