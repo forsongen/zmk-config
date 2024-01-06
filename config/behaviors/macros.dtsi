@@ -1,5 +1,5 @@
 macros {
-    
+
     /* LAYERS */
 
     ZMK_MACRO(overSYM,
@@ -8,7 +8,7 @@ macros {
     ZMK_MACRO(overNUM,
         bindings = <&kp F24 &sl NUM>;
     )
-    
+
     /* SYMBOL SHORTCUTS */
 
     ZMK_MACRO(pairLtGt,
@@ -24,7 +24,7 @@ macros {
         bindings = <&kp LBKT &kp RBKT &kp LEFT>;
     )
     ZMK_MACRO(tripleGrave,
-        bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>;        
+        bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>;
     )
 
     /* H DIGRAPHS */
@@ -59,7 +59,7 @@ macros {
                 , <&macro_release &kp RSHFT>
                 , <&macro_tap &kp H>;
     )
-    ZMK_MACRO(ght, 
+    ZMK_MACRO(ght,
         bindings = <&kp G &kp H &kp T>;
     )
     ZMK_MACRO(Ph,
@@ -86,277 +86,6 @@ macros {
                 , <&macro_release &kp RSHFT>
                 , <&macro_tap &kp U>;
     )
-
-    /* PRONOUN COMBOS */ // Enable in config.h
-
-
-    #if defined ENABLE_PRONOUN_COMBOS
-
-        // I
-        ZMK_MACRO(typePnMe,
-            bindings = <&macro_tap &kp M>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp E>;
-        )
-        ZMK_MACRO(typePnMy,
-            bindings = <&macro_tap &kp M>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp Y>;
-        )
-        ZMK_MACRO(typePnMine,
-            bindings = <&macro_tap &kp M>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp I &kp N &kp E>;
-        )
-        ZMK_MACRO(typePnIm,
-            bindings = <&macro_tap &kp LS(I)>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp APOS &kp M>;
-        )
-        ZMK_MACRO(typePnIll,
-            bindings = <&macro_tap &kp LS(I)>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp APOS &kp L &kp L>;
-        )
-        ZMK_MACRO(typePnIve,
-            bindings = <&macro_tap &kp LS(I)>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp APOS &kp V &kp E>;
-        )
-        ZMK_MACRO(typePnId,
-            bindings = <&macro_tap &kp LS(I)>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp APOS &kp D>;
-        )
-
-        // You
-        ZMK_MACRO(typePnYou,
-            bindings = <&macro_tap &kp Y>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp O &kp U>;
-        )
-        ZMK_MACRO(typePnYour,
-            bindings = <&macro_tap &kp Y>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp O &kp U &kp R>;
-        )
-        ZMK_MACRO(typePnYours,
-            bindings = <&macro_tap &kp Y>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp O &kp U &kp R&kp S>;
-        )
-        ZMK_MACRO(typePnYoure,
-            bindings = <&macro_tap &kp Y>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp O &kp U &kp APOS &kp R &kp E>;
-        )
-        ZMK_MACRO(typePnYoull,
-            bindings = <&macro_tap &kp Y>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp O &kp U &kp APOS &kp L &kp L>;
-        )
-        ZMK_MACRO(typePnYouve,
-            bindings = <&macro_tap &kp Y>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp O &kp U &kp APOS &kp V &kp E>;
-        )
-        ZMK_MACRO(typePnYoud,
-            bindings = <&macro_tap &kp Y>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp O &kp U &kp APOS &kp D>;
-        )
-
-        // He
-        ZMK_MACRO(typePnHe,
-            bindings = <&macro_tap &kp H>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp E>;
-        )
-        ZMK_MACRO(typePnHim,
-            bindings = <&macro_tap &kp H>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp I &kp M>;
-        )
-        ZMK_MACRO(typePnHis,
-            bindings = <&macro_tap &kp H>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp I &kp S>;
-        )
-        ZMK_MACRO(typePnHe,
-            bindings = <&macro_tap &kp H>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp E &kp APOS &kp S>;
-        )
-        ZMK_MACRO(typePnHell,
-            bindings = <&macro_tap &kp H>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp E &kp APOS &kp L &kp L>;
-        )
-        ZMK_MACRO(typePnHed,
-            bindings = <&macro_tap &kp H>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp E &kp APOS &kp D>;
-        )
-
-        // She
-        ZMK_MACRO(typePnShe,
-            bindings = <&macro_tap &kp S>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp H &kp E>;
-        )
-        ZMK_MACRO(typePnHer,
-            bindings = <&macro_tap &kp H>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp E &kp R>;
-        )
-        ZMK_MACRO(typePnHers,
-            bindings = <&macro_tap &kp H>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp E &kp R &kp S>;
-        )
-        ZMK_MACRO(typePnShes,
-            bindings = <&macro_tap &kp S>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp H &kp E &kp APOS &kp S>;
-        )
-        ZMK_MACRO(typePnShell,
-            bindings = <&macro_tap &kp S>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp H &kp E &kp APOS &kp L &kp L>;
-        )
-        ZMK_MACRO(typePnShed,
-            bindings = <&macro_tap &kp S>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp H &kp E &kp APOS &kp D>;
-        )
-
-        // We
-        ZMK_MACRO(typePnWe,
-            bindings = <&macro_tap &kp W>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp E>;
-        )
-        ZMK_MACRO(typePnUs,
-            bindings = <&macro_tap &kp U>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp S>;
-        )
-        ZMK_MACRO(typePnOur,
-            bindings = <&macro_tap &kp O>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp U &kp R>;
-        )
-        ZMK_MACRO(typePnOurs,
-            bindings = <&macro_tap &kp O>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp U &kp R &kp S>;
-        )
-        ZMK_MACRO(typePnWere,
-            bindings = <&macro_tap &kp W>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp E &kp APOS &kp R &kp E>;
-        )
-        ZMK_MACRO(typePnWell,
-            bindings = <&macro_tap &kp W>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp E &kp APOS &kp L &kp L>;
-        )
-        ZMK_MACRO(typePnWeve,
-            bindings = <&macro_tap &kp W>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp E &kp APOS &kp V &kp E>;
-        )
-        ZMK_MACRO(typePnWed,
-            bindings = <&macro_tap &kp W>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp E &kp APOS &kp D>;
-        )
-
-        // They
-        ZMK_MACRO(typePnThey,
-            bindings = <&macro_tap &kp T>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp H &kp E &kp Y>;
-        )
-        ZMK_MACRO(typePnThem,
-            bindings = <&macro_tap &kp T>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp H &kp E &kp M>;
-        )
-        ZMK_MACRO(typePnTheir,
-            bindings = <&macro_tap &kp T>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp H &kp E &kp I &kp R>;
-        )
-        ZMK_MACRO(typePnTheirs,
-            bindings = <&macro_tap &kp O>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp H &kp E &kp I &kp R &kp S>;
-        )
-        ZMK_MACRO(typePnTheyre,
-            bindings = <&macro_tap &kp T>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp H &kp E &kp Y &kp APOS &kp R &kp E>;
-        )
-        ZMK_MACRO(typePnTheyll,
-            bindings = <&macro_tap &kp T>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp H &kp E &kp Y &kp APOS &kp L &kp L>;
-        )
-        ZMK_MACRO(typePnTheyve,
-            bindings = <&macro_tap &kp T>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp H &kp E &kp Y &kp APOS &kp V &kp E>;
-        )
-        ZMK_MACRO(typePnTheyd,
-            bindings = <&macro_tap &kp T>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp RSHFT>
-                    , <&macro_tap &kp H &kp E &kp Y &kp APOS &kp D>;
-        )
-
-    #endif // ENABLE_PRONOUN_COMBOS
 
 };
 

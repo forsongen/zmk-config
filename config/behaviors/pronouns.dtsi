@@ -1,0 +1,331 @@
+// Enable in config.h
+
+macros {
+
+    // I
+    ZMK_MACRO(typePnMe,
+        bindings = <&macro_tap &kp M>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp E>;
+    )
+    ZMK_MACRO(typePnMy,
+        bindings = <&macro_tap &kp M>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp Y>;
+    )
+    ZMK_MACRO(typePnMine,
+        bindings = <&macro_tap &kp M>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp I &kp N &kp E>;
+    )
+    ZMK_MACRO(typePnIm,
+        bindings = <&macro_tap &kp LS(I)>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp APOS &kp M>;
+    )
+    ZMK_MACRO(typePnIll,
+        bindings = <&macro_tap &kp LS(I)>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp APOS &kp L &kp L>;
+    )
+    ZMK_MACRO(typePnIve,
+        bindings = <&macro_tap &kp LS(I)>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp APOS &kp V &kp E>;
+    )
+    ZMK_MACRO(typePnId,
+        bindings = <&macro_tap &kp LS(I)>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp APOS &kp D>;
+    )
+
+    // You
+    ZMK_MACRO(typePnYou,
+        bindings = <&macro_tap &kp Y>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp O &kp U>;
+    )
+    ZMK_MACRO(typePnYour,
+        bindings = <&macro_tap &kp Y>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp O &kp U &kp R>;
+    )
+    ZMK_MACRO(typePnYours,
+        bindings = <&macro_tap &kp Y>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp O &kp U &kp R&kp S>;
+    )
+    ZMK_MACRO(typePnYoure,
+        bindings = <&macro_tap &kp Y>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp O &kp U &kp APOS &kp R &kp E>;
+    )
+    ZMK_MACRO(typePnYoull,
+        bindings = <&macro_tap &kp Y>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp O &kp U &kp APOS &kp L &kp L>;
+    )
+    ZMK_MACRO(typePnYouve,
+        bindings = <&macro_tap &kp Y>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp O &kp U &kp APOS &kp V &kp E>;
+    )
+    ZMK_MACRO(typePnYoud,
+        bindings = <&macro_tap &kp Y>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp O &kp U &kp APOS &kp D>;
+    )
+
+    // He
+    ZMK_MACRO(typePnHe,
+        bindings = <&macro_tap &kp H>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp E>;
+    )
+    ZMK_MACRO(typePnHim,
+        bindings = <&macro_tap &kp H>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp I &kp M>;
+    )
+    ZMK_MACRO(typePnHis,
+        bindings = <&macro_tap &kp H>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp I &kp S>;
+    )
+    ZMK_MACRO(typePnHe,
+        bindings = <&macro_tap &kp H>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp E &kp APOS &kp S>;
+    )
+    ZMK_MACRO(typePnHell,
+        bindings = <&macro_tap &kp H>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp E &kp APOS &kp L &kp L>;
+    )
+    ZMK_MACRO(typePnHed,
+        bindings = <&macro_tap &kp H>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp E &kp APOS &kp D>;
+    )
+
+    // She
+    ZMK_MACRO(typePnShe,
+        bindings = <&macro_tap &kp S>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp H &kp E>;
+    )
+    ZMK_MACRO(typePnHer,
+        bindings = <&macro_tap &kp H>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp E &kp R>;
+    )
+    ZMK_MACRO(typePnHers,
+        bindings = <&macro_tap &kp H>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp E &kp R &kp S>;
+    )
+    ZMK_MACRO(typePnShes,
+        bindings = <&macro_tap &kp S>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp H &kp E &kp APOS &kp S>;
+    )
+    ZMK_MACRO(typePnShell,
+        bindings = <&macro_tap &kp S>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp H &kp E &kp APOS &kp L &kp L>;
+    )
+    ZMK_MACRO(typePnShed,
+        bindings = <&macro_tap &kp S>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp H &kp E &kp APOS &kp D>;
+    )
+
+    // We
+    ZMK_MACRO(typePnWe,
+        bindings = <&macro_tap &kp W>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp E>;
+    )
+    ZMK_MACRO(typePnUs,
+        bindings = <&macro_tap &kp U>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp S>;
+    )
+    ZMK_MACRO(typePnOur,
+        bindings = <&macro_tap &kp O>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp U &kp R>;
+    )
+    ZMK_MACRO(typePnOurs,
+        bindings = <&macro_tap &kp O>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp U &kp R &kp S>;
+    )
+    ZMK_MACRO(typePnWere,
+        bindings = <&macro_tap &kp W>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp E &kp APOS &kp R &kp E>;
+    )
+    ZMK_MACRO(typePnWell,
+        bindings = <&macro_tap &kp W>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp E &kp APOS &kp L &kp L>;
+    )
+    ZMK_MACRO(typePnWeve,
+        bindings = <&macro_tap &kp W>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp E &kp APOS &kp V &kp E>;
+    )
+    ZMK_MACRO(typePnWed,
+        bindings = <&macro_tap &kp W>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp E &kp APOS &kp D>;
+    )
+
+    // They
+    ZMK_MACRO(typePnThey,
+        bindings = <&macro_tap &kp T>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp H &kp E &kp Y>;
+    )
+    ZMK_MACRO(typePnThem,
+        bindings = <&macro_tap &kp T>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp H &kp E &kp M>;
+    )
+    ZMK_MACRO(typePnTheir,
+        bindings = <&macro_tap &kp T>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp H &kp E &kp I &kp R>;
+    )
+    ZMK_MACRO(typePnTheirs,
+        bindings = <&macro_tap &kp O>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp H &kp E &kp I &kp R &kp S>;
+    )
+    ZMK_MACRO(typePnTheyre,
+        bindings = <&macro_tap &kp T>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp H &kp E &kp Y &kp APOS &kp R &kp E>;
+    )
+    ZMK_MACRO(typePnTheyll,
+        bindings = <&macro_tap &kp T>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp H &kp E &kp Y &kp APOS &kp L &kp L>;
+    )
+    ZMK_MACRO(typePnTheyve,
+        bindings = <&macro_tap &kp T>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp H &kp E &kp Y &kp APOS &kp V &kp E>;
+    )
+    ZMK_MACRO(typePnTheyd,
+        bindings = <&macro_tap &kp T>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp H &kp E &kp Y &kp APOS &kp D>;
+    )
+}
+
+combos {
+    compatible = "zmk,combos";
+
+        // I
+    COMBO_LAYER(pn1Ss,  &kp LS(I),       RM4 LM2, BASE) // "I"
+    COMBO_LAYER(pn1So,  &typePnMe,       RM4 LM3, BASE) // "Me"
+    COMBO_LAYER(pn1Sp,  &typePnMy,       RM4 LB4, BASE) // "My"
+    COMBO_LAYER(pn1Sps, &typePnMine, RM4 LB4 LB3, BASE) // "Mine"
+    COMBO_LAYER(pnIm,   &typePnIm,       RM4 LT3, BASE) // "I'm"
+    COMBO_LAYER(pnIll,  &typePnIll,      RM4 LB3, BASE) // "I'll"
+    COMBO_LAYER(pnIve,  &typePnIve,      RM4 LB5, BASE) // "I've"
+    COMBO_LAYER(pnId,   &typePnId,       RM4 LB2, BASE) // "I'd"
+
+    // We
+    COMBO_LAYER(pn1Ps,  &typePnWe,       RB2 LM2, BASE) // "We"
+    COMBO_LAYER(pn1Po,  &typePnUs,       RB2 LM3, BASE) // "Us"
+    COMBO_LAYER(pn1Pp,  &typePnOur,      RB2 LB4, BASE) // "Our"
+    COMBO_LAYER(pn1Pps, &typePnOurs, RB2 LB5 LB4, BASE) // "Ours"
+    COMBO_LAYER(pnWere, &typePnWere,     RB2 L1h, BASE) // "We're"
+    COMBO_LAYER(pnWell, &typePnWell,     RB2 LB3, BASE) // "We'll"
+    COMBO_LAYER(pnWeve, &typePnWeve,     RB2 LB5, BASE) // "We've"
+    COMBO_LAYER(pnWed,  &typePnWed,      RB2 LB2, BASE) // "We'd"
+
+    // You
+    COMBO_LAYER(pn2s,    &typePnYou,       RB4 LM2, BASE) // "You"
+    COMBO_LAYER(pn2o,    &typePnYou,       RB4 LM3, BASE) // "You" alt
+    COMBO_LAYER(pn2p,    &typePnYour,      RB4 LB4, BASE) // "Your"
+    COMBO_LAYER(pn2ps,   &typePnYours, RB4 LB5 LB4, BASE) // "Yours"
+    COMBO_LAYER(pnYoure, &typePnYoure,     RB4 L1h, BASE) // "You're"
+    COMBO_LAYER(pnYoull, &typePnYoull,     RB4 LB3, BASE) // "You'll"
+    COMBO_LAYER(pnYouve, &typePnYouve,     RB4 LB5, BASE) // "You've"
+    COMBO_LAYER(pnYoud,  &typePnYoud,      RB4 LB2, BASE) // "You'd"
+
+    // He
+    COMBO_LAYER(pn3Ms,  &typePnHe,      RM5 LM2, BASE) // "He"
+    COMBO_LAYER(pn3Mo,  &typePnHim,     RM5 LM3, BASE) // "Him"
+    COMBO_LAYER(pn3Mp,  &typePnHis,     RM5 LB4, BASE) // "His"
+    COMBO_LAYER(pn3Mps, &typePnHis, RM5 LB5 LB4, BASE) // "His" alt
+    COMBO_LAYER(pnHes,  &typePnHes,     RM5 LM5, BASE) // "He's"
+    COMBO_LAYER(pnHell, &typePnHell,    RM5 LB3, BASE) // "He'll"
+    COMBO_LAYER(pnHed,  &typePnHed,     RM5 LB2, BASE) // "He'd"
+
+    // She
+    COMBO_LAYER(pn3Fs,   &typePnShe,      RM4 RM5 LM2, BASE) // "She"
+    COMBO_LAYER(pn3Fo,   &typePnHer,      RM4 RM5 LM3, BASE) // "Her"
+    COMBO_LAYER(pn3Fp,   &typePnHer,      RM4 RM5 LB4, BASE) // "Her" alt
+    COMBO_LAYER(pn3Fps,  &typePnHers, RM4 RM5 LB5 LB4, BASE) // "Hers"
+    COMBO_LAYER(pnShes,  &typePnShes,     RM4 RM5 LM5, BASE) // "She's"
+    COMBO_LAYER(pnShell, &typePnShell,    RM4 RM5 LB3, BASE) // "She'll"
+    COMBO_LAYER(pnShed,  &typePnShed,     RM4 RM5 LB2, BASE) // "She'd"
+
+    //They
+    COMBO_LAYER(pn3Ps,    &typePnThey,       RM3 LM2, BASE) // "They"
+    COMBO_LAYER(pn3Po,    &typePnThem,       RM3 LM3, BASE) // "Them"
+    COMBO_LAYER(pn3Pp,    &typePnTheir,      RM3 LB4, BASE) // "Their"
+    COMBO_LAYER(pn3Pps,   &typePnTheirs, RM3 LB5 LB4, BASE) // "Theirs"
+    COMBO_LAYER(pnTheyre, &typePnTheyre,     RM3 L1h, BASE) // "They're"
+    COMBO_LAYER(pnTheyll, &typePnTheyll,     RM3 LB3, BASE) // "They'll"
+    COMBO_LAYER(pnTheyve, &typePnTheyve,     RM3 LB5, BASE) // "They've"
+    COMBO_LAYER(pnTheyd,  &typePnTheyd,      RM3 LB2, BASE) // "They'd"
+
+}

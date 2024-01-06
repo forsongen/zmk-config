@@ -15,10 +15,10 @@ combos {
     /* LAYERS */
 
     // Layer sticky layers
-    ZMK_COMBO(lSYM, &lsl SYM SYM, LB4 LB3, TYPE) // SYM sticky tap (mo held)
-    ZMK_COMBO(rSYM, &lsl SYM SYM, RB3 RB4, TYPE) // SYM sticky tap (mo held)
-    ZMK_COMBO(lNUM, &lsl NUM NUM, LB3 LB2, TYPE) // NUM sticky tap (mo held)
-    ZMK_COMBO(rNUM, &lsl NUM NUM, RB2 RB3, TYPE) // NUM sticky tap (mo held)
+    ZMK_SK_COMBOS(lSYM, &lsl SYM SYM, LB4 LB3, TYPE) // SYM sticky tap (mo held)
+    ZMK_SK_COMBOS(rSYM, &lsl SYM SYM, RB3 RB4, TYPE) // SYM sticky tap (mo held)
+    ZMK_SK_COMBOS(lNUM, &lsl NUM NUM, LB3 LB2, TYPE) // NUM sticky tap (mo held)
+    ZMK_SK_COMBOS(rNUM, &lsl NUM NUM, RB2 RB3, TYPE) // NUM sticky tap (mo held)
 
     // Overlays
     ZMK_COMBO(lSYMoverlay, &overSYM, LB4 LB3, SYM) // SYM overlay hotkey
@@ -49,11 +49,9 @@ combos {
     ZMK_COMBO(quit,  &kp RG(Q),     LT5 LT4, RAISE) // quit
     ZMK_COMBO(back,  &mkp MB4,      LT4 LT3, RAISE) // back
     ZMK_COMBO(fwd,   &mkp MB5,      LT3 LT2, RAISE) // forward
-    
+
     /* ACTIONS */
 
-    ZMK_COMBO(appswap, &app_swap,  LT4 LT2, RAISE) // app swapper
-    ZMK_COMBO(tabswap, &tab_swap,  LB4 LB2, RAISE) // tab swapper
     ZMK_COMBO(capswd,  &caps_word, L1x R1x, TYPE)   // caps word
 
     /* KEYSTROKES */
@@ -82,7 +80,7 @@ combos {
     ZMK_COMBO(typeQues,  &kp QMARK,       RT3 RT4, BASE) // ?
     ZMK_COMBO(typeAt,    &kp AT,          RT4 RT5, BASE) // @
     ZMK_COMBO(typeUnder, &kp UNDER,       RB2 RB4, TYPE) // _
-    ZMK_COMBO(typeEUR,   &kp LA(LS(N2)),  RT2 RT3, NUM) // €
+    ZMK_COMBO(typeEUR,   &kp LA(N2),      RT2 RT3, NUM) // €
     ZMK_COMBO(typeGBP,   &kp LS(N3),      RT3 RT4, NUM) // £
     ZMK_COMBO(typeUSD,   &kp DLLR,        RT4 RT5, NUM) // $
     ZMK_COMBO(typeEqual, &lk PRCNT EQUAL, RM2 RM4, TYPE ) // = (lk %)
@@ -96,69 +94,5 @@ combos {
     ZMK_COMBO(hyperSpace, &kp HP(SPACE), RB3 RB5, TYPE) // homerow
     ZMK_COMBO(hyperT,     &kp HP(T),     RT3 RT5, TYPE) // homerow search
     ZMK_COMBO(hyperA,     &kp HP(A),     RM3 RM5, TYPE) // homerow scroll
-
-    /* PRONOUN COMBOS */ // Enable in config.h
-
-    #if defined ENABLE_PRONOUN_COMBOS
-        
-        // I
-        COMBO_LAYER(pn1Ss,  &kp LS(I),       RM4 LM2, BASE) // "I"
-        COMBO_LAYER(pn1So,  &typePnMe,       RM4 LM3, BASE) // "Me"
-        COMBO_LAYER(pn1Sp,  &typePnMy,       RM4 LB4, BASE) // "My"
-        COMBO_LAYER(pn1Sps, &typePnMine, RM4 LB4 LB3, BASE) // "Mine"
-        COMBO_LAYER(pnIm,   &typePnIm,       RM4 LT3, BASE) // "I'm"
-        COMBO_LAYER(pnIll,  &typePnIll,      RM4 LB3, BASE) // "I'll"
-        COMBO_LAYER(pnIve,  &typePnIve,      RM4 LB5, BASE) // "I've"
-        COMBO_LAYER(pnId,   &typePnId,       RM4 LB2, BASE) // "I'd"
-
-        // We
-        COMBO_LAYER(pn1Ps,  &typePnWe,       RB2 LM2, BASE) // "We"
-        COMBO_LAYER(pn1Po,  &typePnUs,       RB2 LM3, BASE) // "Us"
-        COMBO_LAYER(pn1Pp,  &typePnOur,      RB2 LB4, BASE) // "Our"
-        COMBO_LAYER(pn1Pps, &typePnOurs, RB2 LB5 LB4, BASE) // "Ours"
-        COMBO_LAYER(pnWere, &typePnWere,     RB2 L1h, BASE) // "We're"
-        COMBO_LAYER(pnWell, &typePnWell,     RB2 LB3, BASE) // "We'll"
-        COMBO_LAYER(pnWeve, &typePnWeve,     RB2 LB5, BASE) // "We've"
-        COMBO_LAYER(pnWed,  &typePnWed,      RB2 LB2, BASE) // "We'd"
-
-        // You
-        COMBO_LAYER(pn2s,    &typePnYou,       RB4 LM2, BASE) // "You"
-        COMBO_LAYER(pn2o,    &typePnYou,       RB4 LM3, BASE) // "You" alt
-        COMBO_LAYER(pn2p,    &typePnYour,      RB4 LB4, BASE) // "Your"
-        COMBO_LAYER(pn2ps,   &typePnYours, RB4 LB5 LB4, BASE) // "Yours"
-        COMBO_LAYER(pnYoure, &typePnYoure,     RB4 L1h, BASE) // "You're"
-        COMBO_LAYER(pnYoull, &typePnYoull,     RB4 LB3, BASE) // "You'll"
-        COMBO_LAYER(pnYouve, &typePnYouve,     RB4 LB5, BASE) // "You've"
-        COMBO_LAYER(pnYoud,  &typePnYoud,      RB4 LB2, BASE) // "You'd"
-
-        // He
-        COMBO_LAYER(pn3Ms,  &typePnHe,      RM5 LM2, BASE) // "He"
-        COMBO_LAYER(pn3Mo,  &typePnHim,     RM5 LM3, BASE) // "Him"
-        COMBO_LAYER(pn3Mp,  &typePnHis,     RM5 LB4, BASE) // "His"
-        COMBO_LAYER(pn3Mps, &typePnHis, RM5 LB5 LB4, BASE) // "His" alt
-        COMBO_LAYER(pnHes,  &typePnHes,     RM5 LM5, BASE) // "He's"
-        COMBO_LAYER(pnHell, &typePnHell,    RM5 LB3, BASE) // "He'll"
-        COMBO_LAYER(pnHed,  &typePnHed,     RM5 LB2, BASE) // "He'd"
-
-        // She
-        COMBO_LAYER(pn3Fs,   &typePnShe,      RM4 RM5 LM2, BASE) // "She"
-        COMBO_LAYER(pn3Fo,   &typePnHer,      RM4 RM5 LM3, BASE) // "Her"
-        COMBO_LAYER(pn3Fp,   &typePnHer,      RM4 RM5 LB4, BASE) // "Her" alt
-        COMBO_LAYER(pn3Fps,  &typePnHers, RM4 RM5 LB5 LB4, BASE) // "Hers"
-        COMBO_LAYER(pnShes,  &typePnShes,     RM4 RM5 LM5, BASE) // "She's"
-        COMBO_LAYER(pnShell, &typePnShell,    RM4 RM5 LB3, BASE) // "She'll"
-        COMBO_LAYER(pnShed,  &typePnShed,     RM4 RM5 LB2, BASE) // "She'd"
-
-        //They
-        COMBO_LAYER(pn3Ps,    &typePnThey,       RM3 LM2, BASE) // "They"
-        COMBO_LAYER(pn3Po,    &typePnThem,       RM3 LM3, BASE) // "Them"
-        COMBO_LAYER(pn3Pp,    &typePnTheir,      RM3 LB4, BASE) // "Their"
-        COMBO_LAYER(pn3Pps,   &typePnTheirs, RM3 LB5 LB4, BASE) // "Theirs"
-        COMBO_LAYER(pnTheyre, &typePnTheyre,     RM3 L1h, BASE) // "They're"
-        COMBO_LAYER(pnTheyll, &typePnTheyll,     RM3 LB3, BASE) // "They'll"
-        COMBO_LAYER(pnTheyve, &typePnTheyve,     RM3 LB5, BASE) // "They've"
-        COMBO_LAYER(pnTheyd,  &typePnTheyd,      RM3 LB2, BASE) // "They'd"
-
-    #endif
 
 };

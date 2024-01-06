@@ -7,12 +7,13 @@ I don't really know what I'm doing, so you probably don't need to linger :)
 ```
                            BASE
   ╭─────────────────────╮         ╭─────────────────────╮
-  │  X   W   M   G   J  │         │  #$  .:  '(  ")  B  │ 
-  │  S   C   N   T   K  │         │  ,;  A   E   I   H  │ 
+  │  X   W   M   G   J  │         │  #$  .:  '(  ")  B  │
+  │  S   C   N   T   K  │         │  ,;  A   E   I   H  │
   │  V   P   L   D   /* ╰───╮ ╭───╯  -+  U   O   Y   F  │
   ╰──────────╮  ENT  R   Sk │ │ Sk  SPC BSP  ╭──────────╯
              ╰──HPR─RSE─SHFT╯ ╰SHFT─LWR─HPR──╯
 ```
+
 Including Qu/Q combo (G + W), Z combo (T + C), H digraph combos, and pronoun combos (expanded).
 
 - [Layers](https://github.com/forsongen/zmk-config/tree/main/config/keymaps#layers)

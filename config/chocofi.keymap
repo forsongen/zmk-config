@@ -5,12 +5,15 @@
 
 #include "./keymaps/3x5_keypos.h"
 #include "config.h"
-#include "nodefree.h"
 
 / {
     #include "./behaviors/macros.dtsi"
     #include "./behaviors/behaviors.dtsi"
     #include "./behaviors/combos.dtsi"
+    #if defined ENABLE_PRONOUNS
+        #include "./behaviors/pronouns.dtsi"
+    #endif // ENABLE_PRONOUNS
+
 
     keymap {
         compatible = "zmk,keymap";

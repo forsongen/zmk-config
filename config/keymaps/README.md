@@ -5,12 +5,13 @@
 ```
                            BASE
   ╭─────────────────────╮         ╭─────────────────────╮
-  │  X   W   M   G   J  │         │  #$  .:  '(  ")  B  │ 
-  │  S   C   N   T   K  │         │  ,;  A   E   I   H  │ 
+  │  X   W   M   G   J  │         │  #$  .:  '(  ")  B  │
+  │  S   C   N   T   K  │         │  ,;  A   E   I   H  │
   │  V   P   L   D   /* ╰───╮ ╭───╯  -+  U   O   Y   F  │
   ╰──────────╮  ENT  R   Sk │ │ Sk  SPC BSP  ╭──────────╯
              ╰──HPR─RSE─SHFT╯ ╰SHFT─LWR─HPR──╯
 ```
+
 Including Qu/Q combo (G + W), Z combo (T + C), H digraph combos, and pronoun combos (expanded).
 
 ```
@@ -20,7 +21,7 @@ Including Qu/Q combo (G + W), Z combo (T + C), H digraph combos, and pronoun com
   │ ←wd  ←   ↑   →  →wd │         │ pg↓ BT3 BT4  ×   ×  │
   │  ×   ×   ↓  bsp del ╰───╮ ╭───╯  ×  BT0 BT1 BT2  ×  │
   ╰──────────╮  res  ●  btl │ │  ×  ovr  ×   ╭──────────╯
-             ╰──────────────╯ ╰──────────────╯ 
+             ╰──────────────╯ ╰──────────────╯
 
                            LOWER
   ╭─────────────────────╮         ╭─────────────────────╮
@@ -28,7 +29,7 @@ Including Qu/Q combo (G + W), Z combo (T + C), H digraph combos, and pronoun com
   │ F5  F6  F7  F8   ×  │         │  ×  mut vl↑ p/p  ×  │
   │ F9  F10 F11 F12  ×  ╰───╮ ╭───╯ lck rck vl↓  ×   ×  │
   ╰──────────╮   ×  ovr  ×  │ │ btl  ●  res  ╭──────────╯
-             ╰──────────────╯ ╰──────────────╯ 
+             ╰──────────────╯ ╰──────────────╯
 
                            SYMBOL
   ╭─────────────────────╮         ╭─────────────────────╮
@@ -111,9 +112,9 @@ Including Qu/Q combo (G + W), Z combo (T + C), H digraph combos, and pronoun com
   │  ×   ×   ×   ×   ×  │
   │  ×  [P]  ×  [D]  ×  │
   ╰─────────────────────╯
-  ```
+```
 
-  ### Left hand, BASE/SYM/NUM
+### Left hand, BASE/SYM/NUM
 
 ```
             Tab                        Space
@@ -174,12 +175,12 @@ Including Qu/Q combo (G + W), Z combo (T + C), H digraph combos, and pronoun com
   ╰─────────────────────╯     ╰─────────────────────╯
 
              $
-  ╭─────────────────────╮   
-  │  ×   ×   ×  ["] [B] │ 
-  │  ×   ×   ×   ×   ×  │    
-  │  ×   ×   ×   ×   ×  │   
+  ╭─────────────────────╮
+  │  ×   ×   ×  ["] [B] │
+  │  ×   ×   ×   ×   ×  │
+  │  ×   ×   ×   ×   ×  │
   ╰─────────────────────╯
-  ```
+```
 
 ### Left hand, RAISE
 

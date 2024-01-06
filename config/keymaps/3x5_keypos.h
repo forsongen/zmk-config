@@ -54,6 +54,7 @@
 #define R1c 35
 
 /* Useful for positional hold taps, currently unused */
-//#define KEYS_L LT2x LT2 LT3 LT4 LT5 LM2x LM2 LM3 LM4 LM5 LB2x LB2 LB3 LB4 LB5 // left-hand keys
-//#define KEYS_R RT2x RT2 RT3 RT4 RT5 RM2x RM2 RM3 RM4 RM5 RB2x RB2 RB3 RB4 RB5 // right-hand keys
-//#define THUMBS L1c L1h L1x R1x R1h R1c                                        // thumb keys
+// #define KEYS_L LT2x LT2 LT3 LT4 LT5 LM2x LM2 LM3 LM4 LM5 LB2x LB2 LB3 LB4 LB5
+// // left-hand keys #define KEYS_R RT2x RT2 RT3 RT4 RT5 RM2x RM2 RM3 RM4 RM5
+// RB2x RB2 RB3 RB4 RB5 // right-hand keys #define THUMBS L1c L1h L1x R1x R1h
+// R1c                                        // thumb keys
