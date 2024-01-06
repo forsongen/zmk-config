@@ -111,7 +111,11 @@ Including Qu/Q combo (G + W), Z combo (T + C), H digraph combos, and pronoun com
   │  ×   ×   ×   ×   ×  │
   │  ×  [P]  ×  [D]  ×  │
   ╰─────────────────────╯
+  ```
 
+  ### Left hand, BASE/SYM/NUM
+
+```
             Tab                        Space
   ╭─────────────────────╮     ╭─────────────────────╮
   │  ×   ×   ×   ×   ×  │     │  ×   ×   ×   ×   ×  │
@@ -127,7 +131,7 @@ Including Qu/Q combo (G + W), Z combo (T + C), H digraph combos, and pronoun com
   ╰─────────────────────╯
 ```
 
-### Right hand, BASE
+### Right hand, BASE/SYM
 
 ```
              !                           ?
@@ -180,18 +184,25 @@ Including Qu/Q combo (G + W), Z combo (T + C), H digraph combos, and pronoun com
 ### Left hand, RAISE
 
 ```
-         Copy/Cut                      Paste
+            Cut                         Copy
   ╭─────────────────────╮     ╭─────────────────────╮
   │  ×   ×   ×   ×   ×  │     │  ×   ×   ×   ×   ×  │
+  │ [S] [C]  ×   ×   ×  │     │  ×  [C] [N]  ×   ×  │
   │  ×   ×   ×   ×   ×  │     │  ×   ×   ×   ×   ×  │
-  │  ×  [P] [L]  ×   ×  │     │  ×   ×  [L] [D]  ×  │
   ╰─────────────────────╯     ╰─────────────────────╯
+
+           Paste
+  ╭─────────────────────╮
+  │  ×   ×   ×   ×   ×  │
+  │  ×   ×  [N] [T]  ×  │
+  │  ×   ×   ×   ×   ×  │
+  ╰─────────────────────╯
 
             Undo                        Redo
   ╭─────────────────────╮     ╭─────────────────────╮
   │  ×   ×   ×   ×   ×  │     │  ×   ×   ×   ×   ×  │
   │  ×   ×   ×   ×   ×  │     │  ×   ×   ×   ×   ×  │
-  │  ×  [P]  ×  [D]  ×  │     │  ×  [P] [L] [D]  ×  │
+  │  ×  [P] [L]  ×   ×  │     │  ×   ×  [L] [D]  ×  │
   ╰─────────────────────╯     ╰─────────────────────╯
 
         Select all                      Find
@@ -217,8 +228,8 @@ Including Qu/Q combo (G + W), Z combo (T + C), H digraph combos, and pronoun com
 
           Appswap                     Tabswap
   ╭─────────────────────╮     ╭─────────────────────╮
-  │  ×  [W]  ×  [G]  ×  │     │  ×  [W] [M] [G]  ×  │
+  │  ×  [W]  ×  [G]  ×  │     │  ×   ×   ×   ×   ×  │
   │  ×   ×   ×   ×   ×  │     │  ×   ×   ×   ×   ×  │
-  │  ×   ×   ×   ×   ×  │     │  ×   ×   ×   ×   ×  │
+  │  ×   ×   ×   ×   ×  │     │  ×  [P]  ×  [D]  ×  │
   ╰─────────────────────╯     ╰─────────────────────╯
 ```

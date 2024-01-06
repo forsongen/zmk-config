@@ -1,73 +1,68 @@
 combos {
     compatible = "zmk,combos";
 
-    /* MODS */ // RAISE/LOWER
+    /* MODS */
 
-    ZMK_COMBO(lCtrl,       &kp LCTRL,                LM5 LM4, RAISE)
-    ZMK_COMBO(lAlt,        &kp LALT,                 LM4 LM3, RAISE)
-    ZMK_COMBO(lGui,        &kp LGUI,                 LM3 LM2, RAISE)
-    ZMK_COMBO(lCtrlAlt,    &kp LC(LALT),         LM5 LM4 LB3, RAISE)
-    ZMK_COMBO(lAltGui,     &kp LA(LGUI),         LM4 LM3 LM2, RAISE)
-    ZMK_COMBO(lCtrlGui,    &kp LC(LGUI),     LM5 LM4 LM3 LM2, RAISE)
-    ZMK_COMBO(lCtrlAltGui, &kp LC(LA(LGUI)), LM5 LT4 LT3 LM2, RAISE)
-    ZMK_COMBO(rCtrl,       &kp RCTRL,                RM4 RM5, LOWER)
-    ZMK_COMBO(rAlt,        &kp RALT,                 RM3 RM4, LOWER)
-    ZMK_COMBO(rGui,        &kp RGUI,                 RM2 RM3, LOWER)
-    ZMK_COMBO(rCtrlAlt,    &kp RC(RALT),         RM3 RM4 RM5, LOWER)
-    ZMK_COMBO(rAltGui,     &kp RA(RGUI),         RM2 RM3 RM4, LOWER)
-    ZMK_COMBO(rCtrlGui,    &kp RC(RGUI),     RM2 RM3 RM4 RM5, LOWER)
-    ZMK_COMBO(rCtrlAltGui, &kp RC(RA(RGUI)), RM2 RT3 RT4 RM5, LOWER)
+    ZMK_COMBO(lGlobe, &kp GLOBE, LM5 RB5, ALL)
+    ZMK_COMBO(lCtrl,  &kp LCTRL, LM4 LB4, ALL)
+    ZMK_COMBO(lAlt,   &kp LALT,  LM3 LB3, ALL)
+    ZMK_COMBO(lGui,   &kp LGUI,  LM2 LB2, ALL)
+    ZMK_COMBO(rGlobe, &kp GLOBE, RM5 RB5, ALL)
+    ZMK_COMBO(rCtrl,  &kp RCTRL, RM4 RB4, ALL)
+    ZMK_COMBO(rAlt,   &kp RALT,  RM3 RB3, ALL)
+    ZMK_COMBO(rGui,   &kp RGUI,  RM2 RB2, ALL)
 
     /* LAYERS */
 
     // Layer sticky layers
-    ZMK_COMBO(lSYM, &lsl SYM SYM, LB4 LB3, ALL) // SYM sticky tap (mo held)
-    ZMK_COMBO(rSYM, &lsl SYM SYM, RB3 RB4, ALL) // SYM sticky tap (mo held)
-    ZMK_COMBO(lNUM, &lsl NUM NUM, LB3 LB2, ALL) // NUM sticky tap (mo held)
-    ZMK_COMBO(rNUM, &lsl NUM NUM, RB2 RB3, ALL) // NUM sticky tap (mo  held)
+    ZMK_COMBO(lSYM, &lsl SYM SYM, LB4 LB3, TYPE) // SYM sticky tap (mo held)
+    ZMK_COMBO(rSYM, &lsl SYM SYM, RB3 RB4, TYPE) // SYM sticky tap (mo held)
+    ZMK_COMBO(lNUM, &lsl NUM NUM, LB3 LB2, TYPE) // NUM sticky tap (mo held)
+    ZMK_COMBO(rNUM, &lsl NUM NUM, RB2 RB3, TYPE) // NUM sticky tap (mo held)
 
     // Overlays
-    ZMK_COMBO(lSYMoverlay, &kp F23, LB4 LB3, SYM) // SYM overlay hotkey
-    ZMK_COMBO(rSYMoverlay, &kp F23, RB3 RB4, SYM) // SYM overlay hotkey
-    ZMK_COMBO(lNUMoverlay, &kp F24, LB3 LB2, NUM) // NUM overlay hotkey
-    ZMK_COMBO(rNUMoverlay, &kp F24, RB2 RB3, NUM) // NUM overlay hotkey
+    ZMK_COMBO(lSYMoverlay, &overSYM, LB4 LB3, SYM) // SYM overlay hotkey
+    ZMK_COMBO(rSYMoverlay, &overSYM, RB3 RB4, SYM) // SYM overlay hotkey
+    ZMK_COMBO(lNUMoverlay, &overNUM, LB3 LB2, NUM) // NUM overlay hotkey
+    ZMK_COMBO(rNUMoverlay, &overNUM, RB2 RB3, NUM) // NUM overlay hotkey
 
     // Layer locks and unlocks
-    ZMK_COMBO(lSYMlock,   &to SYM,  LB4 LM3, ALL) // SYM lock
-    ZMK_COMBO(rSYMlock,   &to SYM,  RM3 RB4, ALL) // SYM lock
-    ZMK_COMBO(lSYMunlock, &to BASE, LB4 LB3, SYM) // SYM unlock -> BASE
-    ZMK_COMBO(rSYMunlock, &to BASE, RB3 RB4, SYM) // SYM unlock -> BASE
-    ZMK_COMBO(lNUMlock,   &to NUM,  LM3 LB2, ALL) // NUM lock
-    ZMK_COMBO(rNUMlock,   &to NUM,  RB2 RM3, ALL) // NUM lock
-    ZMK_COMBO(lNUMunlock, &to BASE, LB3 LB2, NUM) // NUM unlock -> BASE
-    ZMK_COMBO(rNUMunlock, &to BASE, RB2 RB3, NUM) // NUM unlock -> BASE
+    ZMK_COMBO(lSYMlock,   &to SYM,  LB4 LM3, BASE NUM) // SYM lock
+    ZMK_COMBO(rSYMlock,   &to SYM,  RM3 RB4, BASE NUM) // SYM lock
+    ZMK_COMBO(lSYMunlock, &to BASE, LB4 LM3, SYM) // SYM unlock -> BASE
+    ZMK_COMBO(rSYMunlock, &to BASE, RM3 RB4, SYM) // SYM unlock -> BASE
+    ZMK_COMBO(lNUMlock,   &to NUM,  LM3 LB2, BASE SYM) // NUM lock
+    ZMK_COMBO(rNUMlock,   &to NUM,  RB2 RM3, BASE SYM) // NUM lock
+    ZMK_COMBO(lNUMunlock, &to BASE, LM3 LB2, NUM) // NUM unlock -> BASE
+    ZMK_COMBO(rNUMunlock, &to BASE, RB2 RM3, NUM) // NUM unlock -> BASEwwwwwwwww
 
     /* SHORTCUTS */ // RAISE
 
-    ZMK_COMBO(copy,  &lk RG(X) RG(C),   LB4 LB3, RAISE) // copy (lk cut)
-    ZMK_COMBO(paste, &kp RG(V),         LB3 LB2, RAISE) // paste
-    ZMK_COMBO(undo,  &kp RG(Z),         LB4 LB2, RAISE) // undo
-    ZMK_COMBO(redo,  &kp RG(LS(Z)), LB4 LB3 LB2, RAISE) // redo
-    ZMK_COMBO(sall,  &kp RG(A),         LM5 LM3, RAISE) // select all
-    ZMK_COMBO(find,  &kp RG(F),         LM4 LM2, RAISE) // find
-    ZMK_COMBO(close, &kp RG(W),         LB5 LB4, RAISE) // close
-    ZMK_COMBO(quit,  &kp RG(Q),         LT5 LT4, RAISE) // quit
-    ZMK_COMBO(back,  &mkp MB4,          LT4 LT3, RAISE) // back
-    ZMK_COMBO(fwd,   &mkp MB5,          LT3 LT2, RAISE) // forward
+    ZMK_COMBO(cut,   &kp RG(X),     LM5 LM4, RAISE) // cut
+    ZMK_COMBO(copy,  &kp RG(C),     LM4 LM3, RAISE) // copy
+    ZMK_COMBO(paste, &kp RG(V),     LM3 LM2, RAISE) // paste
+    ZMK_COMBO(undo,  &kp RG(Z),     LB4 LB3, RAISE) // undo
+    ZMK_COMBO(redo,  &kp RG(LS(Z)), LB3 LB2, RAISE) // redo
+    ZMK_COMBO(sall,  &kp RG(A),     LM5 LM3, RAISE) // select all
+    ZMK_COMBO(find,  &kp RG(F),     LM4 LM2, RAISE) // find
+    ZMK_COMBO(close, &kp RG(W),     LB5 LB4, RAISE) // close
+    ZMK_COMBO(quit,  &kp RG(Q),     LT5 LT4, RAISE) // quit
+    ZMK_COMBO(back,  &mkp MB4,      LT4 LT3, RAISE) // back
+    ZMK_COMBO(fwd,   &mkp MB5,      LT3 LT2, RAISE) // forward
     
     /* ACTIONS */
 
-    ZMK_COMBO(appswap, &app_swap,     LT4 LT2, RAISE) // app swapper
-    ZMK_COMBO(tabswap, &tab_swap, LT4 LT3 LT2, RAISE) // tab swapper
-    ZMK_COMBO(capswd,  &caps_word,    L1x R1x, ALL)   // caps word
+    ZMK_COMBO(appswap, &app_swap,  LT4 LT2, RAISE) // app swapper
+    ZMK_COMBO(tabswap, &tab_swap,  LB4 LB2, RAISE) // tab swapper
+    ZMK_COMBO(capswd,  &caps_word, L1x R1x, TYPE)   // caps word
 
     /* KEYSTROKES */
 
     ZMK_COMBO(typeQ, &lkqu Q M,     LT4 LT2, BASE) // Qu, Q if held
     ZMK_COMBO(typeZ, &kp Z,         LM4 LM2, BASE) // Z
-    ZMK_COMBO(tab,   &kp TAB,       LM5 LM3, ALL) // tab
-    ZMK_COMBO(space, &kp SPACE, LM4 LM3 LM2, ALL) // space
-    ZMK_COMBO(esc,   &kp ESC,       LT5 LT4, ALL) // esc
+    ZMK_COMBO(tab,   &kp TAB,       LM5 LM3, TYPE)  // tab
+    ZMK_COMBO(space, &kp SPACE, LM4 LM3 LM2, TYPE)  // space
+    ZMK_COMBO(esc,   &kp ESC,       LT5 LT4, TYPE)  // esc
 
     /* H DIGRAPHS */
 
@@ -83,24 +78,24 @@ combos {
 
     /* PUNCTUATION, CURRENCY, EQUIVALENCE */
 
-    ZMK_COMBO(typeExcl,  &kp EXCL,        RT2 RT3, ALL) // !
-    ZMK_COMBO(typeQues,  &kp QMARK,       RT3 RT4, ALL) // ?
-    ZMK_COMBO(typeAt,    &kp AT,          RT4 RT5, ALL) // @
-    ZMK_COMBO(typeUnder, &kp UNDER,       RB2 RB4, ALL) // _
+    ZMK_COMBO(typeExcl,  &kp EXCL,        RT2 RT3, BASE) // !
+    ZMK_COMBO(typeQues,  &kp QMARK,       RT3 RT4, BASE) // ?
+    ZMK_COMBO(typeAt,    &kp AT,          RT4 RT5, BASE) // @
+    ZMK_COMBO(typeUnder, &kp UNDER,       RB2 RB4, TYPE) // _
     ZMK_COMBO(typeEUR,   &kp LA(LS(N2)),  RT2 RT3, NUM) // €
     ZMK_COMBO(typeGBP,   &kp LS(N3),      RT3 RT4, NUM) // £
     ZMK_COMBO(typeUSD,   &kp DLLR,        RT4 RT5, NUM) // $
-    ZMK_COMBO(typeEqual, &lk PRCNT EQUAL, RM2 RM4, ALL) // = (lk %)
-    ZMK_COMBO(typeLt,    &lk AMPS LT,     RM2 RM3, ALL) // < (lk &)
-    ZMK_COMBO(typeGt,    &lk PIPE GT,     RM3 RM4, ALL) // > (lk |)
+    ZMK_COMBO(typeEqual, &lk PRCNT EQUAL, RM2 RM4, TYPE ) // = (lk %)
+    ZMK_COMBO(typeLt,    &lk AMPS LT,     RM2 RM3, TYPE) // < (lk &)
+    ZMK_COMBO(typeGt,    &lk PIPE GT,     RM3 RM4, TYPE) // > (lk |)
     ZMK_COMBO(typeNdash,
-             &lk LA(LS(MINUS)) LA(MINUS), RM4 RM5, ALL) // – (lk —)
+             &lk LA(LS(MINUS)) LA(MINUS), RM4 RM5, TYPE) // – (lk —)
 
     /* HYPER */
 
-    ZMK_COMBO(hyperSpace, &kp HP(SPACE), RB3 RB5, ALL) // homerow
-    ZMK_COMBO(hyperT,     &kp HP(T),     RT3 RT5, ALL) // homerow search
-    ZMK_COMBO(hyperA,     &kp HP(A),     RM3 RM5, ALL) // homerow scroll
+    ZMK_COMBO(hyperSpace, &kp HP(SPACE), RB3 RB5, TYPE) // homerow
+    ZMK_COMBO(hyperT,     &kp HP(T),     RT3 RT5, TYPE) // homerow search
+    ZMK_COMBO(hyperA,     &kp HP(A),     RM3 RM5, TYPE) // homerow scroll
 
     /* PRONOUN COMBOS */ // Enable in config.h
 

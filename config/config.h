@@ -21,6 +21,10 @@
 #define my_tapping_term 170
 #define my_quick_tapping_term 112
 
+/* COMBOS */
+
+#define TYPE BASE SYM NUM
+
 /* BEHAVIOURS */
 
 &mt {

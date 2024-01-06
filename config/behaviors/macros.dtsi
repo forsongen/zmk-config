@@ -1,5 +1,14 @@
 macros {
     
+    /* LAYERS */
+
+    ZMK_MACRO(overSYM,
+        bindings = <&kp F23 &sl SYM>;
+    )
+    ZMK_MACRO(overNUM,
+        bindings = <&kp F24 &sl NUM>;
+    )
+    
     /* SYMBOL SHORTCUTS */
 
     ZMK_MACRO(pairLtGt,
