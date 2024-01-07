@@ -28,16 +28,22 @@
 /* BEHAVIOURS */
 
 &mt {
-  tapping - term - ms = <my_tapping_term>;
-  hold - while - undecided;
+  tapping-term-ms = <my_tapping_term>;
+  hold-while-undecided;
 };
-&sl { release - after - ms = <my_tapping_term>; };
+&sl {
+  release-after-ms = <my_tapping_term>;
+};
 &sk {
-  release - after - ms = <2000>;
-  quick - release;
+  release-after-ms = <2000>;
+  quick-release;
 };
-&caps_word { continue - list = <UNDER MINUS BSPC DEL LEFT RIGHT>; };
-&num_word { layers = <NUM>; };
+&caps_word {
+  continue-list = <UNDER MINUS BSPC DEL LEFT RIGHT>;
+};
+&num_word {
+  layers = <NUM>;
+};
 
 /* NODEFREE CONFIG */
 // Adapted from helper.h in https://github.com/urob/zmk-nodefree-config
@@ -74,8 +80,7 @@
   compatible = "zmk,behavior-tri-state";                                       \
   #binding - cells = <0>
 #define ZMK_BEHAVIOR(name, type, ...)                                          \
-  name:                                                                        \
-  name {                                                                       \
+  name: name {                                                                 \
     ZMK_BEHAVIOR_CORE_##type;                                                  \
     __VA_ARGS__                                                                \
   };
@@ -85,11 +90,13 @@
 #define ZMK_LAYER(...)                                                         \
   MACRO_CHOOSER3(__VA_ARGS__, ZMK_LAYER_3_ARGS, ZMK_LAYER_2_ARGS)(__VA_ARGS__)
 #define ZMK_LAYER_2_ARGS(name, layout)                                         \
-  name { bindings = <layout>; };
+  name {                                                                       \
+    bindings = <layout>;                                                       \
+  };
 #define ZMK_LAYER_3_ARGS(name, layout, sensors)                                \
   name {                                                                       \
     bindings = <layout>;                                                       \
-    sensor - bindings = <sensors>;                                             \
+    sensor-bindings = <sensors>;                                               \
   };
 
 // Combos: ZMK_COMBOS and ZMK_SK_COMBOS
@@ -97,15 +104,15 @@
 #define ZMK_COMBO(name, combo_bindings, keypos, combo_layers)                  \
   name {                                                                       \
     bindings = <combo_bindings>;                                               \
-    key - positions = <keypos>;                                                \
+    key-positions = <keypos>;                                                  \
     layers = <combo_layers>;                                                   \
-    timeout - ms = <30>;                                                       \
+    timeout-ms = <30>;                                                         \
   };
 #define ZMK_SK_COMBOS(name, combo_bindings, keypos, combo_layers)              \
   name {                                                                       \
     bindings = <combo_bindings>;                                               \
-    key - positions = <keypos>;                                                \
+    key-positions = <keypos>;                                                  \
     layers = <combo_layers>;                                                   \
-    timeout - ms = <30>;                                                       \
-    slow - release;                                                            \
+    timeout-ms = <30>;                                                         \
+    slow-release;                                                              \
   };
