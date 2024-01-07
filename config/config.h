@@ -99,5 +99,5 @@
     key-positions = <keypos>; \
     layers = <combo_layers>; \
     timeout-ms = <30>; \
-    slow-release;
+    slow-release; \
   };
