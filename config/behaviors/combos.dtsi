@@ -15,10 +15,10 @@ combos {
     /* LAYERS */
 
     // Layer sticky layers
-    ZMK_SK_COMBOS(lSYM, &lsl SYM SYM, LB4 LB3, TYPE) // SYM sticky tap (mo held)
-    ZMK_SK_COMBOS(rSYM, &lsl SYM SYM, RB3 RB4, TYPE) // SYM sticky tap (mo held)
-    ZMK_SK_COMBOS(lNUM, &lsl NUM NUM, LB3 LB2, TYPE) // NUM sticky tap (mo held)
-    ZMK_SK_COMBOS(rNUM, &lsl NUM NUM, RB2 RB3, TYPE) // NUM sticky tap (mo held)
+    ZMK_SK_COMBO(lSYM, &lsl SYM SYM, LB4 LB3, TYPE) // SYM sticky tap (mo held)
+    ZMK_SK_COMBO(rSYM, &lsl SYM SYM, RB3 RB4, TYPE) // SYM sticky tap (mo held)
+    ZMK_SK_COMBO(lNUM, &lsl NUM NUM, LB3 LB2, TYPE) // NUM sticky tap (mo held)
+    ZMK_SK_COMBO(rNUM, &lsl NUM NUM, RB2 RB3, TYPE) // NUM sticky tap (mo held)
 
     // Overlays
     ZMK_COMBO(lSYMoverlay, &overSYM, LB4 LB3, SYM) // SYM overlay hotkey
