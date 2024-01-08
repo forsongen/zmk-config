@@ -93,11 +93,11 @@
     layers = <combo_layers>; \
     timeout-ms = <30>; \
   };
-#define ZMK_SK_COMBO(name, combo_bindings, keypos, combo_layers) \
+#define ZMK_QCOMBO(name, combo_bindings, keypos, combo_layers) \
   name { \
     bindings = <combo_bindings>; \
     key-positions = <keypos>; \
     layers = <combo_layers>; \
     timeout-ms = <30>; \
-    slow-release; \
+    require-prior-idle-ms = <150>; \
   };
