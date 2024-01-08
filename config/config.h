@@ -8,13 +8,33 @@
 
 /* FEATURE TOGGLES (uncomment to enable) */
 
-//#define ENABLE_PRONOUN_COMBOS
+//#define ENABLE_PRONOUNS // Pronoun combos (see ./behaviors/pronouns.dtsi)
+#define ENABLE_OVERLAYS // Auto overlays for SYM and NUM layers (uses BetterTouchTool)
 
 /* KEYMAP */
 
 #define HYPER LC(LA(LG(LSHFT)))
 #define HP(KEY) LC(LA(LG(LS(KEY))))
 #define BT(N) BT_SEL N
+
+// Overlays
+#define RSEOVER HYP(F1) // Raise overlay (uses BetterTouchTool)
+#define LWROVER HYP(F2) // Lower overlay (uses BetterTouchTool)
+#if defined ENABLE_OVERLAYS
+    #define SYM_htsl SYMOVER_htsl 0 SYM
+    #define SYMLOCK SYMOVERLOCK
+    #define SYMUNLOCK SYMOVERLOCK
+    #define NUM_htsl NUMOVER_htsl 0 0
+    #define NUMLOCK NUMOVERLOCK
+    #define NUMUNLOCK NUMOVERLOCK
+#else
+    #define SYM_htsl htsl SYM SYM
+    #define SYMLOCK to SYM
+    #define SYMUNLOCK to BASE
+    #define NUM_htsl htsl NUM NUM
+    #define NUMLOCK to NUM
+    #define NUMUNLOCK to BASE
+#endif
 
 /* COUNTS */
 

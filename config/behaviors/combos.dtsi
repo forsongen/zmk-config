@@ -13,28 +13,23 @@ combos {
     ZMK_QCOMBO(rGui,   &kp RGUI,  RM2 RB2, ALL)
 
     /* LAYERS */
+    // Enable overlays in config.h
 
-    // Layer sticky layers
-    ZMK_QCOMBO(lSYM, &lsl SYM SYM, LB4 LB3, TYPE) // SYM sticky tap (mo held)
-    ZMK_QCOMBO(rSYM, &lsl SYM SYM, RB3 RB4, TYPE) // SYM sticky tap (mo held)
-    ZMK_QCOMBO(lNUM, &lsl NUM NUM, LB3 LB2, TYPE) // NUM sticky tap (mo held)
-    ZMK_QCOMBO(rNUM, &lsl NUM NUM, RB2 RB3, TYPE) // NUM sticky tap (mo held)
+    // Layers
+    ZMK_QCOMBO(lSYM, &SYM_htsl, LB4 LB3, TYPE) // sl SYM (mo held)
+    ZMK_QCOMBO(rSYM, &SYM_htsl, RB3 RB4, TYPE) // sl SYM (mo held)
+    ZMK_QCOMBO(lNUM, &NUM_htsl, LB3 LB2, TYPE) // sl NUM (mo held)
+    ZMK_QCOMBO(rNUM, &NUM_htsl, RB2 RB3, TYPE) // sl NUM (mo held)
 
-    // Overlays
-    ZMK_COMBO(lSYMoverlay, &overSYM, LB4 LB3, SYM) // SYM overlay hotkey
-    ZMK_COMBO(rSYMoverlay, &overSYM, RB3 RB4, SYM) // SYM overlay hotkey
-    ZMK_COMBO(lNUMoverlay, &overNUM, LB3 LB2, NUM) // NUM overlay hotkey
-    ZMK_COMBO(rNUMoverlay, &overNUM, RB2 RB3, NUM) // NUM overlay hotkey
-
-    // Layer locks and unlocks
-    ZMK_QCOMBO(lSYMlock,   &to SYM,  LB4 LM3, BASE NUM) // SYM lock
-    ZMK_QCOMBO(rSYMlock,   &to SYM,  RM3 RB4, BASE NUM) // SYM lock
-    ZMK_QCOMBO(lSYMunlock, &to BASE, LB4 LM3, SYM) // SYM unlock -> BASE
-    ZMK_QCOMBO(rSYMunlock, &to BASE, RM3 RB4, SYM) // SYM unlock -> BASE
-    ZMK_QCOMBO(lNUMlock,   &to NUM,  LM3 LB2, BASE SYM) // NUM lock
-    ZMK_QCOMBO(rNUMlock,   &to NUM,  RB2 RM3, BASE SYM) // NUM lock
-    ZMK_QCOMBO(lNUMunlock, &to BASE, LM3 LB2, NUM) // NUM unlock -> BASE
-    ZMK_QCOMBO(rNUMunlock, &to BASE, RB2 RM3, NUM) // NUM unlock -> BASEwwwwwwwww
+    // Layer locks
+    ZMK_QCOMBO(lSYMlock,   &SYMLOCK,   LB4 LM3, BASE NUM) // SYM lock
+    ZMK_QCOMBO(rSYMlock,   &SYMLOCK,   RM3 RB4, BASE NUM) // SYM lock
+    ZMK_QCOMBO(lSYMunlock, &SYMUNLOCK, LB4 LM3, SYM) // SYM unlock -> BASE
+    ZMK_QCOMBO(rSYMunlock, &SYMUNLOCK, RM3 RB4, SYM) // SYM unlock -> BASE
+    ZMK_QCOMBO(lNUMlock,   &NUMLOCK,   LM3 LB2, BASE SYM) // NUM lock
+    ZMK_QCOMBO(rNUMlock,   &NUMLOCK,   RB2 RM3, BASE SYM) // NUM lock
+    ZMK_QCOMBO(lNUMunlock, &NUMUNLOCK, LM3 LB2, NUM) // NUM unlock -> BASE
+    ZMK_QCOMBO(rNUMunlock, &NUMUNLOCK, RB2 RM3, NUM) // NUM unlock -> BASE
 
     /* SHORTCUTS */ // RAISE
 
